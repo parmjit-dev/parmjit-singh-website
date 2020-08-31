@@ -1,42 +1,93 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: "Open Sans", sans-serif;
 }
 
 .nav {
-	height: 70px;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 25px;
+  height: 100px;
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 20px auto;
+  /* 
+  .logo-container {
+    height: 100%;
+    width: 70px;
+    padding: 25px;
+  } */
 
-	.logo-container {
-		height: 100%;
-		width: 70px;
-		padding: 25px;
-	}
-
-	.ul {
-		width: 20%;
-		height: 100%;
-		display: flex;
-		align-items: right;
-    justify-content: flex-end;
-  }
-    .test1 {
-      padding: 10px 15px;
-    }
+  /* .ul {
+    width: 10%;
+    height: 100%;
+    display: flex; */
+  /* align-items: center; */
+  /* justify-content: flex-start; */
+  /* .test1 {
+      padding: 10px 10px;
+    } */
 }
 
 .greeting {
-  text-align:right;
+  text-align: right;
+  padding: 50px;
+}
+
+.container {
+  width: 300px;
+  margin: auto;
+}
+
+.container-front {
+  width: 200px;
+  float: left;
+  height: 300px;
+  background-color: green;
+}
+.container-back {
+  width: 200px;
+  float: left;
+  height: 300px;
+  background-color: blue;
+}
+
+.social-container {
+  /* width: auto; */
+  /* padding: 25px 50px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* display: flex; */
+}
+
+a.social {
+  /* position: absolute; */
+  /* width: auto;
+  top: 50%;
+  left: 50%; */
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+
+a.social:hover {
+  transform: translateY(-2px);
+}
+
+a.twitter {
+  color: gray;
+}
+
+a.github {
+  color: gray;
+}
+
+a.mail {
+  color: gray;
 }
