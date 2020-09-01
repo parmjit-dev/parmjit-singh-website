@@ -1,13 +1,43 @@
+*::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  a.scroll {
+    visibility: hidden;
+  }
+  .header-span {
+    position: relative;
+    width: auto;
+    right: 22px;
+  }
+}
+
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #edc8b5;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 code {
   font-family: "Open Sans", sans-serif;
 }
+
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* .type-container {
+  position: relative;
+  width: 500px;
+  top: 50%;
+  left: 40%;
+} */
 
 .nav {
   height: 100px;
@@ -34,9 +64,59 @@ code {
     } */
 }
 
-.greeting {
+.header-span {
+  background-color: #c39295;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 50px;
+}
+
+.header-span:hover {
+  /* transition: background-color 1s, color 1s; */
+  background-color: #a6a5ab;
+  transition: background-color 1050ms ease;
+}
+
+.welcome {
+  background: rgb(117,118,136);
+  background: linear-gradient(180deg, rgba(117,118,136,1) 15%, rgba(168,103,110,1) 55%, rgba(240,106,108,1) 100%);
+}
+
+.project {
+  background: rgb(117,118,136);
+background: linear-gradient(0deg, rgba(117,118,136,1) 15%, rgba(168,103,110,1) 55%, rgba(240,106,108,1) 100%);
+}
+
+.type-container {
+  position: absolute;
+  top: 25%;
+}
+
+.heading_container {
+  position: relative;
   text-align: right;
   padding: 50px;
+  width: 500px;
+  height: 500px;
+  /* border: 1px solid; */
+  /* margin: auto; */
+  float: right;
+  
+}
+
+.skills {
+  margin: 0 auto;
+  padding: 80px;
+}
+
+.abilities {
+  height: 50px
 }
 
 .container {
@@ -47,14 +127,20 @@ code {
 .container-front {
   width: 200px;
   float: left;
-  height: 300px;
-  background-color: green;
+  height: 100px;
 }
 .container-back {
   width: 200px;
   float: left;
-  height: 300px;
-  background-color: blue;
+  height: 180px;
+}
+
+.contact {
+  background: #757688;
+}
+
+.element-container {
+  position: relative;
 }
 
 .social-container {
@@ -74,6 +160,7 @@ a.social {
   margin: 0 1rem;
   transition: transform 250ms;
   display: inline-block;
+  padding: 25px;
 }
 
 a.social:hover {
@@ -81,13 +168,37 @@ a.social:hover {
 }
 
 a.twitter {
-  color: gray;
+  color: #f06a6c;
 }
 
 a.github {
-  color: gray;
+  color: #f06a6c;
 }
 
 a.mail {
-  color: gray;
+  color: #f06a6c;
+}
+
+a.scroll {
+  color: #f06a6c;
+  position: sticky;
+  left: 49%;
+  bottom: 30%;
+	transform: translatey(0px);
+  overflow-block: hidden;
+}
+
+.floating {  
+  animation-name: floating;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 3px;
+}
+
+@keyframes floating {
+  from { transform: translate(0,  0px); }
+  65%  { transform: translate(0, 12px); }
+  to   { transform: translate(0, -0px); }    
 }

@@ -1,12 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { transitions, positions, Provider as AlertProvider } from 'react-alert';
-import AlertTemplate from 'react-alert-template-basic';
-// import { BrowserRouter } from 'react-router-dom';
-// import {Provider} from 'react-redux'
-// import {PersistGate} from 'redux-persist/integration/react';
-// import {store, persistor} from './redux/store'
-
+// import AlertTemplate from 'react-alert-template-basic';
+import { ParallaxProvider } from 'react-scroll-parallax';
+import AlertTemplate from './components/alerts/alert.template';
 import './index.css';
 import App from './app';
 import * as serviceWorker from './serviceWorker';
@@ -18,12 +15,15 @@ const options = {
   offset: '30px',
   // you can also just use 'scale'
   transition: transitions.SCALE,
-};
+}; 
 
 const Root = () => (
-  <AlertProvider template={AlertTemplate} {...options}>
-    <App />
-  </AlertProvider>
+  <ParallaxProvider>
+    <AlertProvider template={AlertTemplate}{...options} >
+      <App />
+    </AlertProvider>
+  </ParallaxProvider>
+
 );
 
 render(<Root />, document.getElementById('root'));
