@@ -15,7 +15,7 @@ import {
 import './index.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faArrowAltCircleDown } from '@fortawesome/free-regular-svg-icons';
+import { faEnvelope} from '@fortawesome/free-regular-svg-icons';
 import { useAlert } from 'react-alert';
 // eslint-disable-next-line import/no-named-as-default-member
 // eslint-disable-next-line import/no-named-as-default
@@ -97,14 +97,7 @@ const App = () => {
 							  height: '1000px',
           }}
         />
-        <a
-          href="/"
-          className="scroll social floating"
-        >
-          <Link activeClass="active" className="test1" to="welcome" spy smooth duration={500}>
-            <FontAwesomeIcon icon={faArrowAltCircleDown} size="3x" />
-          </Link>
-        </a>
+
       </Parallax>
       <div name="welcome" className="welcome">
         {/* <Parallax
@@ -187,7 +180,7 @@ const App = () => {
       </div>
       <Element name="projects" className="project">
         <div>
-          <h2 className="greeting"> Welcome </h2>
+          <h2 className="greeting"> Projects </h2>
 
         </div>
 

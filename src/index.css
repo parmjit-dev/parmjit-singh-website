@@ -15,7 +15,8 @@
 
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Ubuntu',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #edc8b5;
@@ -24,7 +25,8 @@ body {
 }
 
 code {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Ubuntu',
+  sans-serif;
 }
 
 h2 {
@@ -100,14 +102,20 @@ background: linear-gradient(0deg, rgba(117,118,136,1) 15%, rgba(168,103,110,1) 5
 
 .heading_container {
   position: relative;
-  text-align: right;
-  padding: 50px;
-  width: 500px;
-  height: 500px;
+  text-align: center;
+  /* padding: 50px; */
+  /* width: 500px; */
+  width: auto;
+  height: 200px;
   /* border: 1px solid; */
   /* margin: auto; */
-  float: right;
-  
+  /* float: right; */
+
+  }
+
+.greeting {
+  margin: 0px;
+  text-align: center;
 }
 
 .skills {
