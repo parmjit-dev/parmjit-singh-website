@@ -2,9 +2,12 @@
  * onces the basic desgin work on splitting them into components -- like the arrow icons and the links
  */
 
-import React, { useEffect, useState } from 'react';
-import { Parallax, Background } from 'react-parallax';
-import { Parallax as parallaxObject } from 'react-scroll-parallax';
+import React, {
+  useEffect
+} from 'react';
+import {
+  Parallax
+} from 'react-parallax';
 import Typewriter from 'typewriter-effect';
 import {
   Link, Element, Events,
@@ -16,7 +19,7 @@ import { faEnvelope, faArrowAltCircleDown } from '@fortawesome/free-regular-svg-
 import { useAlert } from 'react-alert';
 // eslint-disable-next-line import/no-named-as-default-member
 // eslint-disable-next-line import/no-named-as-default
-import Image from './components/render.image/renderimagecomponent'
+// import Image from './components/render.image/renderimagecomponent'
 
 const App = () => {
   // const pagePosition = ['landing', 'aboutMe', 'projects'];
@@ -94,7 +97,9 @@ const App = () => {
 							  height: '1000px',
           }}
         />
-        <a className="scroll social floating">
+        < a
+        href = "/"
+        className = "scroll social floating" >
           <Link activeClass="active" className="test1" to="welcome" spy smooth duration={500}>
             <FontAwesomeIcon icon={faArrowAltCircleDown} size="3x" />
           </Link>
@@ -135,6 +140,14 @@ const App = () => {
 
                 <li> experience with PHP </li>
 
+                < li > Mongodb < /li>
+
+                  <
+                  li > Postgres < /li>
+
+                  <
+                  li > MySQL < /li>
+
               </div>
             </div>
           </div>
@@ -148,10 +161,7 @@ const App = () => {
         {/* {' '} */}
         {/* </Parallax> */}
 
-      </div>
-      <parallaxObject className="custom-class" y={[-20, 20]} tagOuter="figure">
-        <Image src="./images/thercock.jpg" />
-      </parallaxObject>
+      < /div>
       <Element name="projects" className="project">
         <div>
           <h2 className="greeting"> Welcome </h2>
@@ -173,6 +183,7 @@ const App = () => {
             <FontAwesomeIcon icon={faTwitter} size="3x" />
           </a>
           <a
+            href = "/"
             className="mail social"
             onClick={() => {
               navigator.clipboard.writeText('parmjit.singh.1199@gmail.com');
