@@ -3,10 +3,10 @@
  */
 
 import React, {
-  useEffect
+  useEffect,
 } from 'react';
 import {
-  Parallax
+  Parallax,
 } from 'react-parallax';
 import Typewriter from 'typewriter-effect';
 import {
@@ -97,9 +97,10 @@ const App = () => {
 							  height: '1000px',
           }}
         />
-        < a
-        href = "/"
-        className = "scroll social floating" >
+        <a
+          href="/"
+          className="scroll social floating"
+        >
           <Link activeClass="active" className="test1" to="welcome" spy smooth duration={500}>
             <FontAwesomeIcon icon={faArrowAltCircleDown} size="3x" />
           </Link>
@@ -140,13 +141,35 @@ const App = () => {
 
                 <li> experience with PHP </li>
 
-                < li > Mongodb < /li>
+                <li> Mongodb </li>
 
-                  <
-                  li > Postgres < /li>
+                <li>
+                  {' '}
+                  {
+                  ' '
+                }
+                  Postgres
+                  {' '}
+                  {
+                  ' '
+                }
+                  {' '}
 
-                  <
-                  li > MySQL < /li>
+                </li>
+
+                <li>
+                  {' '}
+                  {
+                  ' '
+                }
+                  MySQL
+                  {' '}
+                  {
+                  ' '
+                }
+                  {' '}
+
+                </li>
 
               </div>
             </div>
@@ -161,7 +184,7 @@ const App = () => {
         {/* {' '} */}
         {/* </Parallax> */}
 
-      < /div>
+      </div>
       <Element name="projects" className="project">
         <div>
           <h2 className="greeting"> Welcome </h2>
@@ -183,7 +206,7 @@ const App = () => {
             <FontAwesomeIcon icon={faTwitter} size="3x" />
           </a>
           <a
-            href = "/"
+            href="/"
             className="mail social"
             onClick={() => {
               navigator.clipboard.writeText('parmjit.singh.1199@gmail.com');
