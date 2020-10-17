@@ -123,6 +123,10 @@ background: linear-gradient(0deg, rgba(117,118,136,1) 15%, rgba(168,103,110,1) 5
   padding: 80px;
 }
 
+.qualifications {
+  text-align: center;
+}
+
 .abilities {
   height: 50px
 }
