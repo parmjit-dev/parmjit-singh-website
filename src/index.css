@@ -86,7 +86,7 @@ h2 {
 .header-span:hover {
   /* transition: background-color 1s, color 1s; */
   background-color: #a6a5ab;
-  transition: background-color 1050ms ease;
+  transition: background-color 1000ms ease;
 }
 
 .welcome {
