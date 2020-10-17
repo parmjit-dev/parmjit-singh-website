@@ -15,7 +15,7 @@ import {
 import './index.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope} from '@fortawesome/free-regular-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { useAlert } from 'react-alert';
 // eslint-disable-next-line import/no-named-as-default-member
 // eslint-disable-next-line import/no-named-as-default
@@ -108,70 +108,75 @@ const App = () => {
         > */}
         <div className="heading_container">
           <h1 className="greeting"> Welcome </h1>
-          <p className="about_me paragraph" />
-          Greetings, my name is Parmjit Singh I am a full stack web developer who has a passion for web development, learning and self development.
+          <p className="about_me paragraph">
+            Greetings, my name is Parmjit Singh I am a full stack web developer who has a passion for web development, learning and self development.
+          <br/>
+          </p>
         </div>
         <div className="qualifications">
           <div className="skills">
             <div className="container-skills">
               <h2 className="qualifications-heading"> Qualifications: </h2>
-              <li> Bsc Computer Science </li>
+              <li> Studying towards obtaining my Bsc in Computer Science </li>
               <h2 className="abilities"> Techinical Experience </h2>
-              <div className="container-front">
-                <h2 className="abilities-heading"> Frontend </h2>
-                <li> React </li>
-                <li> Angular </li>
-                <li> SCSS </li>
+              <div className="abilities-containers">
+                <div className="container-front">
+                  <h2 className="abilities-heading"> Frontend </h2>
+                  <li> React </li>
+                  <li> Angular </li>
+                  <li> SCSS </li>
+                </div>
+                <div className="container-back">
+                  <h2 className="abilities-heading"> Backend </h2>
+
+                  <li> NodeJS </li>
+
+                  <li> Python(Django) </li>
+
+                  <li> C#(.NET CORE) </li>
+
+                  <li> experience with PHP </li>
+
+                  <li> Mongodb </li>
+
+                  <li>
+                    {' '}
+                    {
+                  ' '
+                }
+                    Postgres
+                    {' '}
+                    {
+                  ' '
+                }
+                    {' '}
+
+                  </li>
+
+                  <li>
+                    {' '}
+                    {
+                  ' '
+                }
+                    MySQL
+                    {' '}
+                    {
+                  ' '
+                }
+                    {' '}
+
+                  </li>
+
+                </div>
               </div>
-              <div className="container-back">
-                <h2 className="abilities-heading"> Backend </h2>
 
-                <li> NodeJS </li>
-
-                <li> Python(Django) </li>
-
-                <li> C#(.NET CORE) </li>
-
-                <li> experience with PHP </li>
-
-                <li> Mongodb </li>
-
-                <li>
-                  {' '}
-                  {
-                  ' '
-                }
-                  Postgres
-                  {' '}
-                  {
-                  ' '
-                }
-                  {' '}
-
-                </li>
-
-                <li>
-                  {' '}
-                  {
-                  ' '
-                }
-                  MySQL
-                  {' '}
-                  {
-                  ' '
-                }
-                  {' '}
-
-                </li>
-
-              </div>
             </div>
           </div>
         </div>
         {' '}
         <div
           style={{
-            height: '1000px',
+            height: '200px',
           }}
         />
         {/* {' '} */}
