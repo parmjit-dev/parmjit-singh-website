@@ -152,7 +152,7 @@ const App = () => {
                 <div className="container-back">
                   <h2 className="abilities-heading"> Backend </h2>
 
-                  <li> NodeJS </li>
+                  <li> NodeJS - ExpressJS Framework</li>
 
                   <li> Python(Django) </li>
 
