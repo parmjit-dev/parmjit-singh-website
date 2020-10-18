@@ -17,6 +17,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { useAlert } from 'react-alert';
+import Helmet from 'react-helmet';
+
 // eslint-disable-next-line import/no-named-as-default-member
 // eslint-disable-next-line import/no-named-as-default
 // import Image from './components/render.image/renderimagecomponent'
@@ -42,6 +44,25 @@ const App = () => {
   return (
   // eslint-disable-next-line react/jsx-filename-extension
     <div>
+      <Helmet>
+        <title>Parmjit.Dev</title>
+        <meta name="description" content="Portfolio Site of Parmjit Singh Gill. Full Stack Developer, BSc Computer Science, 20." />
+
+        <meta itemProp="name" content="Parmjit.Dev" />
+        <meta itemProp="description" content="Portfolio Site of Parmjit Singh Gill. Full Stack Developer, BSc Computer Science, 20." />
+        <meta itemProp="image" content="" />
+
+        <meta property="og:url" content="https://parmjit.dev" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Parmjit.Dev" />
+        <meta property="og:description" content="Portfolio Site of Parmjit Singh Gill. Full Stack Developer, BSc Computer Science, 20." />
+        <meta property="og:image" content="" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Parmjit.Dev" />
+        <meta name="twitter:description" content="Portfolio Site of Parmjit Singh Gill. Full Stack Developer, BSc Computer Science, 20." />
+        <meta name="twitter:image" content="" />
+      </Helmet>
       <Parallax bgImage={require('./images/Iceberg-Minimalist-4k-HD-Artist-4k-Wallpapers-Images-.jpg')} bgImageAlt="the cat" strength={200}>
         <nav className="navbar">
           <div className="container-fluid">
@@ -110,7 +131,7 @@ const App = () => {
           <h1 className="greeting"> Welcome </h1>
           <p className="about_me paragraph">
             Greetings, my name is Parmjit Singh I am a full stack web developer who has a passion for web development, learning and self development.
-          <br/>
+            <br />
           </p>
         </div>
         <div className="qualifications">
