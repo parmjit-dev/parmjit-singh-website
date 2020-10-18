@@ -144,8 +144,9 @@ const App = () => {
               <div className="abilities-containers">
                 <div className="container-front">
                   <h2 className="abilities-heading"> Frontend </h2>
-                  <li> React </li>
+                  <li> React - Context API + Hooks and Redux</li>
                   <li> Angular </li>
+                  <li> Jquery </li>
                   <li> SCSS </li>
                 </div>
                 <div className="container-back">
@@ -187,6 +188,9 @@ const App = () => {
                 }
                     {' '}
 
+                  </li>
+                  <li>
+                    AWS - Lambda and S3
                   </li>
 
                 </div>
