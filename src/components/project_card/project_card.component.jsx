@@ -1,21 +1,22 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
-// import './header.style.scss';
+import './project_card.style.scss';
 
-const Header = (image, title, desc) => (
-  <div className="header">
-    <div className="options">
-      <div className="image" style={{ backgroundImage: `url(${image})`}} to="/">
-        About Me
-      </div>
-      <div className="option" to="/shop">
-        Projects
-      </div>
-      <div className="option" to="/shop">
-        Contact
-      </div>
-    </div>
+const Card = ({
+  link, image, title, desc,
+}) => (
+  <div className="card">
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      <img className="card-image" src={image} alt={`${title} project`} />
+      <h4 className="card-title">
+        {' '}
+        {title}
+      </h4>
+      <h5 className="card-desc">
+        {desc}
+      </h5>
+    </a>
   </div>
 );
 
-export default Header;
+export default Card;

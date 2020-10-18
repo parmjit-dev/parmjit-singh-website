@@ -18,6 +18,7 @@ import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { useAlert } from 'react-alert';
 import Helmet from 'react-helmet';
+import Card from './components/project_card/project_card.component';
 
 // eslint-disable-next-line import/no-named-as-default-member
 // eslint-disable-next-line import/no-named-as-default
@@ -204,18 +205,20 @@ const App = () => {
         {/* </Parallax> */}
 
       </div>
-      <Element name="projects" className="project">
-        <div>
-          <h2 className="greeting"> Projects </h2>
+      <div className="project_container">
+        <Element name="projects" className="project">
+          <h2 className="project-greetings"> Projects </h2>
+          <div className="card_container">
+            <Card link="https://mythosapi.herokuapp.com/" title="Mythos API" image={require('./static/mythosapi.png')} desc="This is an API built with Django-Rest-Framework and uses AWS S3 for file storage" />
+          </div>
+          <div
+            style={{
+              height: '800px',
+            }}
+          />
+        </Element>
+      </div>
 
-        </div>
-
-        <div
-          style={{
-            height: '1000px',
-          }}
-        />
-      </Element>
       <Element name="contact" className="contact">
         <div className="social-container">
           <a href="https://github.com/Wolf-PSG?tab=repositories" className="github social">
