@@ -213,7 +213,7 @@ const App = () => {
         <Element name="projects" className="project">
           <h2 className="project-greetings"> Projects </h2>
           <div className="card_container">
-            <Card link="https://mythosapi.herokuapp.com/" title="Mythos API" image={require('./static/mythosapi.png')} desc="This is an API built with Django-Rest-Framework and uses AWS S3 for file storage" />
+            <Card link="https://mythosapi.herokuapp.com/" title="Mythos API" image={require('./static/mythosapi.png')} desc="This is an API built with Django-Rest-Framework, Postgres and uses AWS S3 for file storage" />
           </div>
           <div
             style={{
