@@ -143,6 +143,7 @@ const App = () => {
                   <li> React - Context API + Hooks and Redux</li>
                   <li> experience Angular </li>
                   <li> Jquery </li>
+                  <li> GraphQl </li>
                   <li> SCSS </li>
                 </div>
                 <div className="container-back">
