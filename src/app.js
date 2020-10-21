@@ -122,7 +122,8 @@ const App = () => {
         <div className="heading_container">
           <h1 className="greeting"> Welcome </h1>
           <p className="about_me paragraph">
-            Greetings, my name is Parmjit Singh I am a full stack web developer who has a passion for web
+            Greetings, my name is Parmjit Singh
+            I am a full stack web developer who has a passion for web
             development, learning and self development.
             <br />
           </p>
@@ -130,34 +131,42 @@ const App = () => {
         <div className="qualifications">
           <div className="skills">
             <div className="container-skills">
-              <h2 className="qualifications-heading"> Qualifications: </h2>
-              <li> Studying towards obtaining my Bsc in Computer Science </li>
+              <div className="awards">
+                <h2 className="qualifications-heading"> Qualifications: </h2>
+                <li> Studying towards obtaining my Bsc in Computer Science </li>
+              </div>
               <h2 className="abilities"> Techinical Experience </h2>
               <div className="abilities-containers">
                 <div className="container-front">
                   <h2 className="abilities-heading"> Frontend </h2>
+                  <br />
                   <li> React - Context API + Hooks and Redux</li>
-                  <li> experience Angular </li>
+                  <br />
+                  <li> experience with Angular </li>
+                  <br />
                   <li> Jquery </li>
+                  <br />
                   <li> GraphQl </li>
+                  <br />
                   <li> SCSS </li>
                 </div>
                 <div className="container-back">
                   <h2 className="abilities-heading"> Backend </h2>
-
+                  <br />
                   <li> NodeJS - ExpressJS Framework</li>
-
+                  <br />
                   <li> Python(Django) </li>
-
-                  <li> experience C#(.NET CORE) </li>
-
+                  <br />
+                  <li> experience with C#(.NET CORE) </li>
+                  <br />
                   <li> experience with PHP </li>
-
+                  <br />
                   <li> Mongodb </li>
-
+                  <br />
                   <li>  Postgres   </li>
-
+                  <br />
                   <li>  MySQL   </li>
+                  <br />
                   <li>AWS - Lambda and S3</li>
                 </div>
               </div>
@@ -216,5 +225,4 @@ const App = () => {
     </div>
   );
 };
-
 export default App;
