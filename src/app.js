@@ -1,7 +1,3 @@
-/**
- * onces the basic desgin work on splitting them into components -- like the arrow icons and the links
- */
-
 import React, { useEffect } from 'react';
 import { Parallax } from 'react-parallax';
 import Typewriter from 'typewriter-effect';
@@ -174,8 +170,6 @@ const App = () => {
 					  height: '200px',
           }}
         />
-        {/* {' '} */}
-        {/* </Parallax> */}
       </div>
       <div className="project_container">
         <Element name="projects" className="project">

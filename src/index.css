@@ -1,15 +1,20 @@
 *::-webkit-scrollbar {
   display: none;
 }
-
+* {
+  width: auto;
+}
 @media screen and (max-width: 600px) {
-  a.scroll {
+  /* a.scroll {
     visibility: hidden;
   }
+  */
   .header-span {
     position: relative;
     width: auto;
     right: 22px;
+    margin: 0px;
+    padding: 0px;
   }
   .card_container {
     display: flex;
@@ -18,8 +23,17 @@
     align-items: center;
     text-align: center;
     min-height: 60vh;
-  }
-}
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    }
+    }
+
+    @media screen and (min-width: 768px) {
+      .card_container {
+        padding: 40px;
+      }
+    }
 
 body {
   margin: 0;
@@ -60,22 +74,6 @@ h2 {
   justify-content: space-around;
   text-align: center;
   margin: 20px auto;
-  /* 
-  .logo-container {
-    height: 100%;
-    width: 70px;
-    padding: 25px;
-  } */
-
-  /* .ul {
-    width: 10%;
-    height: 100%;
-    display: flex; */
-  /* align-items: center; */
-  /* justify-content: flex-start; */
-  /* .test1 {
-      padding: 10px 10px;
-    } */
 }
 
 .header-span {
@@ -92,7 +90,8 @@ h2 {
 }
 
 .header-span:hover {
-  /* transition: background-color 1s, color 1s; */
+  /* transition: background-color 1s, */
+  /* color 1s; */
   background-color: #a6a5ab;
   transition: background-color 1000ms ease;
 }
@@ -143,10 +142,12 @@ h2 {
   height: 50px
 }
 
-.container {
+/* .container {
   width: 300px;
   margin: auto;
 }
+
+*/
 
 .abilities-containers {
   position: relative;
@@ -179,16 +180,17 @@ h2 {
 
 }
 
+.card {
+  margin: 0px;
+}
 .card_container {
   max-width: 1500px;
-  margin: auto;
-  padding: 40px;
+  /* padding: 40px; */
 }
 
 .project-greetings {
   margin: 0px;
   text-align: center;
-  /* position: relative; */
 }
 
 .contact {
@@ -216,7 +218,7 @@ a.social {
   margin: 0 1rem;
   transition: transform 250ms;
   display: inline-block;
-  padding: 25px;
+  /* padding: 25px; */
 }
 
 a.social:hover {
