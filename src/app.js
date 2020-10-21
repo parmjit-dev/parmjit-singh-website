@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect } from 'react';
 import { Parallax } from 'react-parallax';
 import Typewriter from 'typewriter-effect';
@@ -211,7 +212,6 @@ const App = () => {
             <FontAwesomeIcon icon={faLinkedin} size="3x" />
           </a>
           <a
-            href="/"
             className="mail social"
             onClick={() => {
 						  navigator.clipboard.writeText('parmjit.singh.1199@gmail.com');
