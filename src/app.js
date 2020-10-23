@@ -191,6 +191,12 @@ const App = () => {
               image={require('./static/mythosapi.png')}
               desc="This is an API built with Django-Rest-Framework, Postgres and uses AWS S3 for file storage"
             />
+            <Card 
+              link="https://quiz-maker-psg.netlify.app/"
+              title="quiz-maker Web App"
+              image={require('./static/quiz-maker-psg.png')}
+              desc="This is a Web App built with the MERN (Mongodb, Express.js, React, Node.js) stack using AWS S3 for image storage. The Node API is hosted on heroku"
+            />
           </div>
           <div
             style={{
