@@ -1,19 +1,20 @@
+/* eslint-disable react/button-has-type */
 // App.js
-import React from 'react'
-import { useAlert } from 'react-alert'
- 
+import React from 'react';
+import { useAlert } from 'react-alert';
+
 const App = () => {
-  const alert = useAlert()
- 
+  const alert = useAlert();
+
   return (
     <button
       onClick={() => {
-        alert.show('Oh look, an alert!')
+        alert.show('Oh look, an alert!');
       }}
     >
       Show Alert
     </button>
-  )
-}
- 
-export default App
+  );
+};
+
+export default App;

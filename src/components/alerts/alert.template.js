@@ -1,4 +1,9 @@
-import React from 'react'
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/jsx-filename-extension */
+import React from 'react';
 
 const alertStyle = {
   backgroundColor: '#956c76',
@@ -12,28 +17,28 @@ const alertStyle = {
   boxSizing: 'border-box',
   fontSize: '11px',
   position: 'relative',
-}
+};
 
 const contentWrapperStyle = {
   padding: '10px 60px 10px 10px',
   display: 'flex',
   width: '100%',
   justifyContent: 'center',
-  alignItems: 'center'
-}
+  alignItems: 'center',
+};
 
 const iconPlaceholderStyle = {
   display: 'flex',
   justifyContent: 'center',
-  width: '50px'
-}
+  width: '50px',
+};
 
 const messageStyle = {
   flex: 3,
   textAlign: 'center',
   textTransform: 'uppercase',
   width: '100%',
-}
+};
 
 const closeButtonStyle = {
   minWidth: '50px',
@@ -47,9 +52,11 @@ const closeButtonStyle = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-}
+};
 
-const AlertTemplate = ({ message, options, style, close }) => (
+const AlertTemplate = ({
+  message, options, style, close,
+}) => (
   <div style={{ ...alertStyle, ...style }}>
     <div style={contentWrapperStyle}>
       <div style={iconPlaceholderStyle}>
@@ -61,12 +68,12 @@ const AlertTemplate = ({ message, options, style, close }) => (
       onClick={close}
       style={closeButtonStyle}
     >
-      <svg fill='white' xmlns='http://www.w3.org/2000/svg' height='25' width='25' viewBox='0 0 48 48'>
-        <path d='M38 12.83l-2.83-2.83-11.17 11.17-11.17-11.17-2.83 2.83 11.17 11.17-11.17 11.17 2.83 2.83 11.17-11.17 11.17 11.17 2.83-2.83-11.17-11.17z' />
-        <path d='M0 0h48v48h-48z' fill='none' />
+      <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 48 48">
+        <path d="M38 12.83l-2.83-2.83-11.17 11.17-11.17-11.17-2.83 2.83 11.17 11.17-11.17 11.17 2.83 2.83 11.17-11.17 11.17 11.17 2.83-2.83-11.17-11.17z" />
+        <path d="M0 0h48v48h-48z" fill="none" />
       </svg>
     </div>
   </div>
-)
+);
 
-export default AlertTemplate
+export default AlertTemplate;

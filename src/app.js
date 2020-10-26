@@ -1,3 +1,11 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable no-mixed-spaces-and-tabs */
+/* eslint-disable no-tabs */
+/* eslint-disable global-require */
+/* eslint-disable func-names */
+/* eslint-disable no-console */
+/* eslint-disable prefer-rest-params */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect } from 'react';
 import { Parallax } from 'react-parallax';
@@ -11,6 +19,9 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { useAlert } from 'react-alert';
 import Helmet from 'react-helmet';
 import Card from './components/project_card/project_card.component';
+import background from './images/Iceberg-Minimalist-4k-HD-Artist-4k-Wallpapers-Images-.jpg';
+import mythosJPG from './static/mythosapi.png';
+import quizmakerJPG from './static/quiz-maker-psg.png';
 
 // eslint-disable-next-line import/no-named-as-default-member
 // eslint-disable-next-line import/no-named-as-default
@@ -27,9 +38,9 @@ const App = () => {
   const clickHandler = () => {
     ReactGA.event({
       category: 'Button',
-      action: 'user clicked a project'
+      action: 'user clicked a project',
     });
-  }
+  };
   const alert = useAlert();
   useEffect(() => {
     Events.scrollEvent.register('begin', function () {
@@ -80,7 +91,7 @@ const App = () => {
         <meta name="twitter:image" content="" />
       </Helmet>
       <Parallax
-        bgImage={require('./images/Iceberg-Minimalist-4k-HD-Artist-4k-Wallpapers-Images-.jpg')}
+        bgImage={background}
         bgImageAlt="the cat"
         strength={200}
       >
@@ -200,14 +211,14 @@ const App = () => {
             <Card
               link="https://mythosapi.herokuapp.com/"
               title="Mythos API"
-              image={require('./static/mythosapi.png')}
+              image={mythosJPG}
               desc="This is an API built with Django-Rest-Framework, Postgres and uses AWS S3 for file storage"
               onClick={clickHandler}
             />
             <Card
               link="https://quiz-maker-psg.netlify.app/"
               title="quiz-maker Web App"
-              image={require('./static/quiz-maker-psg.png')}
+              image={quizmakerJPG}
               desc="This is a Web App built with the MERN (Mongodb, Express.js, React, Node.js) stack using AWS S3 for image storage. The Node API is hosted on heroku"
               onClick={clickHandler}
             />
