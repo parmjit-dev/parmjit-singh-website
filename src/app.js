@@ -30,8 +30,8 @@ import quizmakerJPG from './static/quiz-maker-psg.png';
 const App = () => {
   // const pagePosition = ['landing', 'aboutMe', 'projects'];
   // const [checkPosition] = useState(0);
+  ReactGA.initialize('G-PD44F5B8QK');
   useEffect(() => {
-    ReactGA.initialize('G-PD44F5B8QK');
     ReactGA.pageview('/');
   }, []);
 
