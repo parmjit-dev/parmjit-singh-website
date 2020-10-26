@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import { Parallax } from 'react-parallax';
 import Typewriter from 'typewriter-effect';
+import ReactGA from 'react-ga';
 import { Link, Element, Events } from 'react-scroll';
 import './index.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,6 +19,17 @@ import Card from './components/project_card/project_card.component';
 const App = () => {
   // const pagePosition = ['landing', 'aboutMe', 'projects'];
   // const [checkPosition] = useState(0);
+  useEffect(() => {
+    ReactGA.initialize('181206635');
+    ReactGA.pageview('/');
+  }, []);
+
+  const clickHandler = () => {
+    ReactGA.event({
+      category: 'Button',
+      action: 'user clicked a project'
+    });
+  }
   const alert = useAlert();
   useEffect(() => {
     Events.scrollEvent.register('begin', function () {
@@ -190,12 +202,14 @@ const App = () => {
               title="Mythos API"
               image={require('./static/mythosapi.png')}
               desc="This is an API built with Django-Rest-Framework, Postgres and uses AWS S3 for file storage"
+              onClick={clickHandler}
             />
-            <Card 
+            <Card
               link="https://quiz-maker-psg.netlify.app/"
               title="quiz-maker Web App"
               image={require('./static/quiz-maker-psg.png')}
               desc="This is a Web App built with the MERN (Mongodb, Express.js, React, Node.js) stack using AWS S3 for image storage. The Node API is hosted on heroku"
+              onClick={clickHandler}
             />
           </div>
           <div

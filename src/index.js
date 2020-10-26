@@ -1,12 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { transitions, positions, Provider as AlertProvider } from 'react-alert';
-// import AlertTemplate from 'react-alert-template-basic';
 import { ParallaxProvider } from 'react-scroll-parallax';
+import ReactGA from 'react-ga';
 import AlertTemplate from './components/alerts/alert.template';
 import './index.css';
 import App from './app';
 import * as serviceWorker from './serviceWorker';
+
+ReactGA.initialize('181206635');
 
 const options = {
   // you can also just use 'bottom center'
