@@ -31,7 +31,7 @@ const App = () => {
   // const pagePosition = ['landing', 'aboutMe', 'projects'];
   // const [checkPosition] = useState(0);
   useEffect(() => {
-    ReactGA.initialize('G-0GMZGNKVZ2');
+    ReactGA.initialize('G-PD44F5B8QK');
     ReactGA.pageview('/');
   }, []);
 
