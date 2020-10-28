@@ -14,7 +14,11 @@ import ReactGA from 'react-ga';
 import { Link, Element, Events } from 'react-scroll';
 import './index.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import {
+  faTwitter,
+  faGithub,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { useAlert } from 'react-alert';
 import Helmet from 'react-helmet';
@@ -30,8 +34,8 @@ import quizmakerJPG from './static/quiz-maker-psg.png';
 const App = () => {
   // const pagePosition = ['landing', 'aboutMe', 'projects'];
   // const [checkPosition] = useState(0);
-  ReactGA.initialize('G-PD44F5B8QK');
   useEffect(() => {
+    ReactGA.initialize('G-0GMZGNKVZ2');
     ReactGA.pageview('/');
   }, []);
 
@@ -90,24 +94,60 @@ const App = () => {
         />
         <meta name="twitter:image" content="" />
       </Helmet>
-      <Parallax
-        bgImage={background}
-        bgImageAlt="the cat"
-        strength={200}
-      >
+      {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GMZGNKVZ2"></script>
+        <script>
+            {window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-0GMZGNKVZ2');
+        </script> */}
+      <Parallax bgImage={background} bgImageAlt="the cat" strength={200}>
         <nav className="navbar">
           <div className="container-fluid">
-            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div
+              className="collapse navbar-collapse"
+              id="bs-example-navbar-collapse-1"
+            >
               <ul className="nav navbar-nav">
-                <Link activeClass="active" className="test1" to="welcome" spy smooth duration={1000}>
-                  <span className="header-span"> About Me </span>
+                <Link
+                  activeClass="active"
+                  className="test1"
+                  to="welcome"
+                  spy
+                  smooth
+                  duration={1000}
+                >
+                  <span className="header-span">
+                    {' '}
+                    About Me
+                    {' '}
+                  </span>
                 </Link>
 
-                <Link activeClass="active" className="test1" to="projects" spy smooth duration={1000}>
-                  <span className="header-span"> Projects </span>
+                <Link
+                  activeClass="active"
+                  className="test1"
+                  to="projects"
+                  spy
+                  smooth
+                  duration={1000}
+                >
+                  <span className="header-span">
+                    {' '}
+                    Projects
+                    {' '}
+                  </span>
                 </Link>
 
-                <Link activeClass="active" className="test1" to="contact" spy smooth duration={1500}>
+                <Link
+                  activeClass="active"
+                  className="test1"
+                  to="contact"
+                  spy
+                  smooth
+                  duration={1500}
+                >
                   <span className="header-span"> Contact </span>
                 </Link>
               </ul>
@@ -118,21 +158,21 @@ const App = () => {
           <Typewriter
             className="typewriter"
             options={{
-						  strings: [
-						    '<span style="font-size:60px;"> Parmjit Singh</span>',
-						    '<span style="font-size:60px;"> Full Stack Developer</span>',
-						    '<span style="font-size:60px;"> Welcome to my site.</span>',
-						  ],
-						  autoStart: true,
-						  loop: true,
-						  cursor: '<span style="font-size:60px;">|</span>',
+              strings: [
+                '<span style="font-size:60px;"> Parmjit Singh</span>',
+                '<span style="font-size:60px;"> Full Stack Developer</span>',
+                '<span style="font-size:60px;"> Welcome to my site.</span>',
+              ],
+              autoStart: true,
+              loop: true,
+              cursor: '<span style="font-size:60px;">|</span>',
             }}
           />
         </div>
         <div
           className="element-container"
           style={{
-					  height: '1000px',
+            height: '1000px',
           }}
         />
       </Parallax>
@@ -146,9 +186,9 @@ const App = () => {
         <div className="heading_container">
           <h1 className="greeting"> Welcome </h1>
           <p className="about_me paragraph">
-            Greetings, my name is Parmjit Singh
-            I am a full stack web developer who has a passion for web
-            development, learning and self development.
+            Greetings, my name is Parmjit Singh I am a full stack web
+            developer who has a passion for web development, learning
+            and self development.
             <br />
           </p>
         </div>
@@ -156,15 +196,31 @@ const App = () => {
           <div className="skills">
             <div className="container-skills">
               <div className="awards">
-                <h2 className="qualifications-heading"> Qualifications: </h2>
-                <li> Studying towards obtaining my Bsc in Computer Science </li>
+                <h2 className="qualifications-heading">
+                  {' '}
+                  Qualifications:
+                  {' '}
+                </h2>
+                <li>
+                  {' '}
+                  Studying towards obtaining my Bsc in Computer
+                  Science
+                  {' '}
+                </li>
               </div>
               <h2 className="abilities"> Techinical Experience </h2>
               <div className="abilities-containers">
                 <div className="container-front">
-                  <h2 className="abilities-heading"> Frontend </h2>
+                  <h2 className="abilities-heading">
+                    {' '}
+                    Frontend
+                    {' '}
+                  </h2>
                   <br />
-                  <li> React - Context API + Hooks and Redux</li>
+                  <li>
+                    {' '}
+                    React - Context API + Hooks and Redux
+                  </li>
                   <br />
                   <li> experience with Angular </li>
                   <br />
@@ -175,7 +231,11 @@ const App = () => {
                   <li> SCSS </li>
                 </div>
                 <div className="container-back">
-                  <h2 className="abilities-heading"> Backend </h2>
+                  <h2 className="abilities-heading">
+                    {' '}
+                    Backend
+                    {' '}
+                  </h2>
                   <br />
                   <li> NodeJS - ExpressJS Framework</li>
                   <br />
@@ -187,11 +247,21 @@ const App = () => {
                   <br />
                   <li> Mongodb </li>
                   <br />
-                  <li>  Postgres   </li>
+                  <li> Postgres </li>
                   <br />
-                  <li>  MySQL   </li>
+                  <li> MySQL </li>
                   <br />
                   <li>AWS - Lambda and S3</li>
+                  <br />
+                  {/* <div className="container-back">
+                    <h2 className="abilities-heading">
+                      {' '}
+                      Testing
+                      {' '}
+                    </h2>
+                    <br />
+                    <li> API testing with Postman </li>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -200,7 +270,7 @@ const App = () => {
         {' '}
         <div
           style={{
-					  height: '200px',
+            height: '400px',
           }}
         />
       </div>
@@ -225,7 +295,7 @@ const App = () => {
           </div>
           <div
             style={{
-						  height: '800px',
+              height: '800px',
             }}
           />
         </Element>
@@ -233,20 +303,37 @@ const App = () => {
 
       <Element name="contact" className="contact">
         <div className="social-container">
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/Wolf-PSG?tab=repositories" className="github social">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/Wolf-PSG?tab=repositories"
+            className="github social"
+          >
             <FontAwesomeIcon icon={faGithub} size="3x" />
           </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/_Parmjit_" className="twitter social">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitter.com/_Parmjit_"
+            className="twitter social"
+          >
             <FontAwesomeIcon icon={faTwitter} size="3x" />
           </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/parmjit-gill-b139721b8/" className="linkedin social">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/parmjit-gill-b139721b8/"
+            className="linkedin social"
+          >
             <FontAwesomeIcon icon={faLinkedin} size="3x" />
           </a>
           <a
             className="mail social"
             onClick={() => {
-						  navigator.clipboard.writeText('parmjit.singh.1199@gmail.com');
-						  alert.show('Email Copied');
+              navigator.clipboard.writeText(
+                'parmjit.singh.1199@gmail.com',
+              );
+              alert.show('Email Copied');
             }}
           >
             <FontAwesomeIcon icon={faEnvelope} size="3x" />
