@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable no-mixed-spaces-and-tabs */
@@ -30,14 +31,14 @@ import quizmakerJPG from './static/quiz-maker-psg.png';
 // eslint-disable-next-line import/no-named-as-default-member
 // eslint-disable-next-line import/no-named-as-default
 // import Image from './components/render.image/renderimagecomponent'
+ReactGA.initialize('UA-181720692-1');
 
 const App = () => {
   // const pagePosition = ['landing', 'aboutMe', 'projects'];
   // const [checkPosition] = useState(0);
   useEffect(() => {
-    ReactGA.initialize('G-0GMZGNKVZ2');
-    ReactGA.pageview('/');
-  }, []);
+      ReactGA.pageview(window.location.pathname + window.location.search);
+  });
 
   const clickHandler = () => {
     ReactGA.event({
