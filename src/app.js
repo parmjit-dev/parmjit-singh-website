@@ -62,7 +62,7 @@ const App = () => {
   });
 
   return (
-  // eslint-disable-next-line react/jsx-filename-extension
+      // eslint-disable-next-line react/jsx-filename-extension
     <div>
       <Helmet>
         <title>Parmjit.Dev</title>
@@ -120,9 +120,8 @@ const App = () => {
                   duration={1000}
                 >
                   <span className="header-span">
-                    {' '}
-                    About Me
-                    {' '}
+
+                    About M
                   </span>
                 </Link>
 
@@ -135,9 +134,8 @@ const App = () => {
                   duration={1000}
                 >
                   <span className="header-span">
-                    {' '}
-                    Projects
-                    {' '}
+
+                    Project
                   </span>
                 </Link>
 
@@ -159,22 +157,22 @@ const App = () => {
           <Typewriter
             className="typewriter"
             options={{
-              strings: [
-                '<span style="font-size:60px;"> Parmjit Singh</span>',
-                '<span style="font-size:60px;"> Full Stack Developer</span>',
-                '<span style="font-size:60px;"> Welcome to my site.</span>',
-              ],
-              autoStart: true,
-              loop: true,
-              cursor: '<span style="font-size:60px;">|</span>',
-            }}
+                          strings: [
+                              '<span style="font-size:60px;"> Parmjit Singh</span>',
+                              '<span style="font-size:60px;"> Full Stack Developer</span>',
+                              '<span style="font-size:60px;"> Welcome to my site.</span>',
+                          ],
+                          autoStart: true,
+                          loop: true,
+                          cursor: '<span style="font-size:60px;">|</span>',
+                      }}
           />
         </div>
         <div
           className="element-container"
           style={{
-            height: '1000px',
-          }}
+                      height: '1000px',
+                  }}
         />
       </Parallax>
       <div name="welcome" className="welcome">
@@ -198,28 +196,26 @@ const App = () => {
             <div className="container-skills">
               <div className="awards">
                 <h2 className="qualifications-heading">
-                  {' '}
+
                   Qualifications:
-                  {' '}
+
                 </h2>
                 <li>
-                  {' '}
+
                   Studying towards obtaining my Bsc in Computer
                   Science
-                  {' '}
+
                 </li>
               </div>
               <h2 className="abilities"> Techinical Experience </h2>
               <div className="abilities-containers">
                 <div className="container-front">
                   <h2 className="abilities-heading">
-                    {' '}
                     Frontend
-                    {' '}
                   </h2>
                   <br />
                   <li>
-                    {' '}
+
                     React - Context API + Hooks and Redux
                   </li>
                   <br />
@@ -233,9 +229,8 @@ const App = () => {
                 </div>
                 <div className="container-back">
                   <h2 className="abilities-heading">
-                    {' '}
+
                     Backend
-                    {' '}
                   </h2>
                   <br />
                   <li> NodeJS - ExpressJS Framework</li>
@@ -256,9 +251,9 @@ const App = () => {
                   <br />
                   {/* <div className="container-back">
                     <h2 className="abilities-heading">
-                      {' '}
+
                       Testing
-                      {' '}
+
                     </h2>
                     <br />
                     <li> API testing with Postman </li>
@@ -268,11 +263,11 @@ const App = () => {
             </div>
           </div>
         </div>
-        {' '}
+
         <div
           style={{
-            height: '400px',
-          }}
+                      height: '400px',
+                  }}
         />
       </div>
       <div className="project_container">
@@ -290,14 +285,18 @@ const App = () => {
               link="https://quiz-maker-psg.netlify.app/"
               title="quiz-maker Web App"
               image={quizmakerJPG}
-              desc="This is a Web App built with the MERN (Mongodb, Express.js, React, Node.js) stack using AWS S3 for image storage. The Node API is hosted on heroku"
-              onClick={clickHandler}
+              desc="This is a Web App built with the MERN (Mongodb, Express.js, React, Node.js) stack using AWS S3 for image storage. The Node API is hosted on heroku -- Site is currently being reworked/developed"
+              onClick={() => ReactGA.event(
+                                  'PROJECT',
+                                  'QUIZ PROJECT CLICKED',
+                                  'QUIZ_PAGE',
+                              )}
             />
           </div>
           <div
             style={{
-              height: '800px',
-            }}
+                          height: '800px',
+                      }}
           />
         </Element>
       </div>
@@ -331,11 +330,11 @@ const App = () => {
           <a
             className="mail social"
             onClick={() => {
-              navigator.clipboard.writeText(
-                'parmjit.singh.1199@gmail.com',
-              );
-              alert.show('Email Copied');
-            }}
+                          navigator.clipboard.writeText(
+                              'parmjit.singh.1199@gmail.com',
+                          );
+                          alert.show('Email Copied');
+                      }}
           >
             <FontAwesomeIcon icon={faEnvelope} size="3x" />
           </a>
