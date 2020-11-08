@@ -80,7 +80,7 @@ const App = () => {
 
         <meta property="og:url" content="https://parmjit.dev" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Parmjit.Dev" />
+        <meta property="og:title" content="Parmjit.dev" />
         <meta
           property="og:description"
           content="Portfolio Site of Parmjit Singh Gill. Full Stack Developer, BSc Computer Science, 20."
@@ -121,12 +121,11 @@ const App = () => {
                 >
                   <span className="header-span">
 
-                    About M
+                    About Me
                   </span>
                 </Link>
 
                 <Link
-                  activeClass="active"
                   className="test1"
                   to="projects"
                   spy
