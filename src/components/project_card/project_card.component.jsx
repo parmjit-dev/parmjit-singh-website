@@ -4,7 +4,7 @@ import React from 'react';
 import './project_card.style.scss';
 
 const Card = ({
-  link, image, title, desc,
+  link, image, title, desc, githubLink,
 }) => (
   <div className="card">
     <a href={link} target="_blank" rel="noopener noreferrer">
@@ -16,6 +16,12 @@ const Card = ({
       <h5 className="card-desc">
         {desc}
       </h5>
+    </a>
+    <a className="buttonCode" href={githubLink} target="_blank" rel="noopener noreferrer">
+      {' '}
+      code for:
+      {' '}
+      {title}
     </a>
   </div>
 );

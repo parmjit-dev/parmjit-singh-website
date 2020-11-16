@@ -61,6 +61,13 @@ h2 {
   padding: 0;
 }
 
+/* @media all and (max-width:30em){ */
+/*  button{ */
+/*   display:block; */
+/*   margin:0.4em auto; */
+/*  } */
+/* } */
+
 /* .type-container {
   position: relative;
   width: 500px;
@@ -96,6 +103,7 @@ h2 {
   background-color: #a6a5ab;
   transition: background-color 1000ms ease;
 }
+
 
 .welcome {
   background: rgb(117,118,136);
