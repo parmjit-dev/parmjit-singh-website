@@ -54,9 +54,7 @@ const closeButtonStyle = {
   alignItems: 'center',
 };
 
-const AlertTemplate = ({
-  message, options, style, close,
-}) => (
+const AlertTemplate = ({ message, options, style, close }) => (
   <div style={{ ...alertStyle, ...style }}>
     <div style={contentWrapperStyle}>
       <div style={iconPlaceholderStyle}>
@@ -64,11 +62,14 @@ const AlertTemplate = ({
       </div>
       <div style={messageStyle}>{message}</div>
     </div>
-    <div
-      onClick={close}
-      style={closeButtonStyle}
-    >
-      <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 48 48">
+    <div onClick={close} style={closeButtonStyle}>
+      <svg
+        fill="white"
+        xmlns="http://www.w3.org/2000/svg"
+        height="25"
+        width="25"
+        viewBox="0 0 48 48"
+      >
         <path d="M38 12.83l-2.83-2.83-11.17 11.17-11.17-11.17-2.83 2.83 11.17 11.17-11.17 11.17 2.83 2.83 11.17-11.17 11.17 11.17 2.83-2.83-11.17-11.17z" />
         <path d="M0 0h48v48h-48z" fill="none" />
       </svg>
