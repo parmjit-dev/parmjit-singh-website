@@ -148,7 +148,6 @@ const App = () => {
                 <h2 className="qualifications-heading">Qualifications:</h2>
                 <li>Studying towards obtaining my Bsc in Computer Science</li>
               </div>
-              <h2 className="abilities"> Techinical Experience </h2>
               <div className="abilities-containers">
                 <div className="container-front">
                   <h2 className="abilities-heading">Frontend</h2>
