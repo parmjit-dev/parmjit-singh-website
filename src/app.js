@@ -49,13 +49,13 @@ const App = () => {
         <title>Parmjit.Dev</title>
         <meta
           name="description"
-          content="Portfolio Site of Parmjit Singh Gill. Full Stack Developer, BSc Computer Science, 20."
+          content="Portfolio Site of Parmjit Singh Gill. Full Stack Developer, BSc Computer Science, 21."
         />
 
         <meta itemProp="name" content="Parmjit.Dev" />
         <meta
           itemProp="description"
-          content="Portfolio Site of Parmjit Singh Gill. Full Stack Developer, BSc Computer Science, 20."
+          content="Portfolio Site of Parmjit Singh Gill. Full Stack Developer, BSc Computer Science, 21."
         />
         <meta itemProp="image" content="" />
 
@@ -64,7 +64,7 @@ const App = () => {
         <meta property="og:title" content="Parmjit.dev" />
         <meta
           property="og:description"
-          content="Portfolio Site of Parmjit Singh Gill. Full Stack Developer, BSc Computer Science, 20."
+          content="Portfolio Site of Parmjit Singh Gill. Full Stack Developer, BSc Computer Science, 21."
         />
         <meta property="og:image" content="" />
 
@@ -72,14 +72,14 @@ const App = () => {
         <meta name="twitter:title" content="Parmjit.Dev" />
         <meta
           name="twitter:description"
-          content="Portfolio Site of Parmjit Singh Gill. Full Stack Developer, BSc Computer Science, 20."
+          content="Portfolio Site of Parmjit Singh Gill. Full Stack Developer, BSc Computer Science, 21."
         />
         <meta name="twitter:image" content="" />
       </Helmet>
       <Parallax bgImage={background} bgImageAlt="the cat" strength={200}>
         <nav className="navbar">
           <div className="container-fluid">
-            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div className="collapse navbar-collapse">
               <ul className="nav navbar-nav">
                 <Link
                   activeClass="active"
@@ -193,7 +193,7 @@ const App = () => {
       </div>
       <div className="project_container">
         <Element name="projects" className="project">
-          <h2 className="project-greetings"> Projects </h2>
+          <h2 className="project-greetings"> Projects - Made From Scratch </h2>
           <div className="card_container">
             <Card
               link="https://mythosapi.herokuapp.com/"
