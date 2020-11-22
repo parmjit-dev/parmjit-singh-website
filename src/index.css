@@ -136,6 +136,7 @@ h2 {
   /* padding: 50px; */
   /* width: 500px; */
   width: auto;
+  margin-bottom: 150px;
   height: 100px;
   /* border: 1px solid; */
   /* margin: auto; */
@@ -145,6 +146,12 @@ h2 {
 .greeting {
   margin: 0px;
   text-align: center;
+}
+
+.about_me_paragraph {
+  /* width: 80%; */
+  margin: 20px;
+  word-wrap: break-word;
 }
 
 .skills {
@@ -174,6 +181,10 @@ h2 {
 
 .container-back {
   margin: 160px 0px 0px 0px;
+}
+
+.container-test {
+  margin: 20px 0px 0px 0px;
 }
 
 .project_container {

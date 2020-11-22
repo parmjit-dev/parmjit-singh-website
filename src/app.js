@@ -30,12 +30,12 @@ const App = () => {
     });
   };
   useEffect(() => {
-    Events.scrollEvent.register('begin', () => {
-      console.log('start', arguments);
-    });
-    Events.scrollEvent.register('end', () => {
-      console.log('end', arguments);
-    });
+  //   Events.scrollEvent.register('begin', () => {
+  //     console.log('start', arguments);
+  //   });
+  //   Events.scrollEvent.register('end', () => {
+  //     console.log('end', arguments);
+  //   });
 
     return function unmount() {
       Events.scrollEvent.remove('begin');
@@ -46,19 +46,17 @@ const App = () => {
   return (
     <div>
       <Helmet>
-        <title>Parmjit.Dev</title>
+        <title> Parmjit.Dev </title>{' '}
         <meta
           name="description"
           content="Portfolio Site of Parmjit Singh Gill. Full Stack Developer, BSc Computer Science, 21."
         />
-
         <meta itemProp="name" content="Parmjit.Dev" />
         <meta
           itemProp="description"
           content="Portfolio Site of Parmjit Singh Gill. Full Stack Developer, BSc Computer Science, 21."
         />
         <meta itemProp="image" content="" />
-
         <meta property="og:url" content="https://parmjit.dev" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Parmjit.dev" />
@@ -67,7 +65,6 @@ const App = () => {
           content="Portfolio Site of Parmjit Singh Gill. Full Stack Developer, BSc Computer Science, 21."
         />
         <meta property="og:image" content="" />
-
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Parmjit.Dev" />
         <meta
@@ -75,7 +72,7 @@ const App = () => {
           content="Portfolio Site of Parmjit Singh Gill. Full Stack Developer, BSc Computer Science, 21."
         />
         <meta name="twitter:image" content="" />
-      </Helmet>
+      </Helmet>{' '}
       <Parallax bgImage={background} bgImageAlt="the cat" strength={200}>
         <nav className="navbar">
           <div className="container-fluid">
@@ -89,13 +86,11 @@ const App = () => {
                   smooth
                   duration={1000}
                 >
-                  <span className="buttonCode header_btns">About Me</span>
+                  <span className="buttonCode header_btns"> About Me </span>{' '}
                 </Link>
-
                 <Link className="test1" to="projects" spy smooth duration={1000}>
-                  <span className="buttonCode header_btns">Project</span>
+                  <span className="buttonCode header_btns"> Project </span>{' '}
                 </Link>
-
                 <Link
                   activeClass="active"
                   className="test1"
@@ -104,12 +99,12 @@ const App = () => {
                   smooth
                   duration={1500}
                 >
-                  <span className="buttonCode header_btns"> Contact </span>
-                </Link>
-              </ul>
-            </div>
-          </div>
-        </nav>
+                  <span className="buttonCode header_btns"> Contact </span>{' '}
+                </Link>{' '}
+              </ul>{' '}
+            </div>{' '}
+          </div>{' '}
+        </nav>{' '}
         <div className="type-container">
           <Typewriter
             className="typewriter"
@@ -123,77 +118,78 @@ const App = () => {
               loop: true,
               cursor: '<span style="font-size:60px;">|</span>',
             }}
-          />
-        </div>
+          />{' '}
+        </div>{' '}
         <div
           className="element-container"
           style={{
             height: '1000px',
           }}
-        />
-      </Parallax>
+        />{' '}
+      </Parallax>{' '}
       <div name="welcome" className="welcome">
         <div className="heading_container">
-          <h1 className="greeting"> Welcome </h1>
-          <p className="about_me paragraph">
-            Greetings, my name is Parmjit Singh I am a full stack web developer who has a passion
-            for web development, learning and self development.
-            <br />
-          </p>
-        </div>
+          <h1 className="greeting"> Welcome </h1>{' '}
+          <div className="about_me_paragraph">
+            <p className="about_me paragraph">
+              Greetings, my name is Parmjit Singh Gill. I am a full stack developer, who has a passion
+              for web development, learning and self development. <br /> I enjoy reading, music and of course
+              coding! as well as helping out in my community.
+              <br /> <br />
+              I have been volunteering at my local gurdwara as a guide and mentor for children and
+              young adults for the past 5 years.
+              <br /> I also have studied two instruments (Harmonium and tabla) to a semi
+              professional level
+            </p>{' '}
+          </div>
+        </div>{' '}
         <div className="qualifications">
           <div className="skills">
             <div className="container-skills">
               <div className="awards">
-                <h2 className="qualifications-heading">Qualifications:</h2>
-                <li>Studying towards obtaining my Bsc in Computer Science</li>
-              </div>
+                <h2 className="qualifications-heading"> Qualifications: </h2> <br />
+                <li> Studying towards obtaining my Bsc in Computer Science </li>{' '}
+              </div>{' '}
               <div className="abilities-containers">
                 <div className="container-front">
-                  <h2 className="abilities-heading">Frontend</h2>
-                  <br />
-                  <li>React - Context API + Hooks and Redux</li>
-                  <br />
-                  <li> experience with Angular </li>
-                  <br />
-                  <li> Jquery </li>
-                  <br />
-                  <li> GraphQl </li>
-                  <br />
-                  <li> SCSS </li>
-                </div>
+                  <h2 className="abilities-heading"> Frontend </h2> <br />
+                  <li>Javascript - es6+ </li> <br />
+                  <li> React - Context API + Hooks and Redux </li> <br />
+                  <li> experience with Angular </li> <br />
+                  <li> Jquery </li> <br />
+                  <li> CSS/SCSS </li>{' '}
+                </div>{' '}
                 <div className="container-back">
-                  <h2 className="abilities-heading">Backend</h2>
-                  <br />
-                  <li> NodeJS - ExpressJS Framework</li>
-                  <br />
-                  <li> Python(Django) </li>
-                  <br />
-                  <li> experience with PHP </li>
-                  <br />
-                  <li> Mongodb </li>
-                  <br />
-                  <li> Postgres </li>
-                  <br />
-                  <li> MySQL </li>
-                  <br />
-                  <li>AWS - Lambda and S3</li>
-                  <br />
-                </div>
-              </div>
-            </div>
-          </div>
+                  <h2 className="abilities-heading"> Backend </h2> <br />
+                  <li> NodeJS - ExpressJS Framework </li> <br />
+                  <li> GraphQl </li> <br />
+                  <li> Python(Django) </li> <br />
+                  <li> experience with PHP </li> <br />
+                  <li> Mongodb </li> <br />
+                  <li> Postgres </li> <br />
+                  <li> MySQL </li> <br />
+                  <li> AWS - Lambda and S3 </li> <br />
+                </div>{' '}
+                <div className="container-test">
+                  <h2 className="abilities-heading"> Testing </h2> <br />
+                  <li> Jest </li> <br />
+                  <li> Postman </li> <br />
+                </div>{' '}
+              </div>{' '}
+            </div>{' '}
+          </div>{' '}
         </div>
-
         <div
           style={{
-            height: '300px',
+            height: '500px',
           }}
-        />
-      </div>
+        />{' '}
+      </div>{' '}
       <div className="project_container">
         <Element name="projects" className="project">
-          <h2 className="project-greetings"> Projects - Made From Scratch </h2>
+          <h2 className="project-greetings"> Projects - Made From Scratch </h2>{' '}
+          <br />
+          <h5 className="project-greetings"> Click the cards to open the app</h5>
           <div className="card_container">
             <Card
               link="https://mythosapi.herokuapp.com/"
@@ -202,7 +198,7 @@ const App = () => {
               desc="This is an API built with Django-Rest-Framework, Postgres and uses AWS S3 for file storage"
               githubLink="https://github.com/Wolf-PSG/MythosAPI"
               onClick={clickHandler}
-            />
+            />{' '}
             <Card
               link="https://quiz-maker-psg.netlify.app/"
               title="quiz-maker Web App -- REST API"
@@ -210,7 +206,7 @@ const App = () => {
               desc="This is a Web App built with the MERN (Mongodb, Express.js, React, Node.js) stack using AWS S3 for image storage. The Node API is hosted on heroku -- Site is currently being reworked/developed -- still usable"
               githubLink="https://github.com/Wolf-PSG/quizPortfolio"
               onClick={() => ReactGA.event('PROJECT', 'QUIZ PROJECT CLICKED', 'QUIZ_PAGE')}
-            />
+            />{' '}
             <Card
               link="https://github.com/Wolf-PSG/myMuse"
               title="myMuse - real-time chat App"
@@ -218,18 +214,17 @@ const App = () => {
               desc="This is a Web App built with a Nodejs and Graphql backend using Subscriptions and Websockets to handle realtime chat funcationality. Frontend is built with React and is currently under development"
               githubLink="https://github.com/Wolf-PSG/myMuse"
             />
-          </div>
+          </div>{' '}
           <div
             style={{
-              height: '900px',
+              height: '400px',
             }}
-          />
-        </Element>
+          />{' '}
+        </Element>{' '}
       </div>
-
       <Element name="contact" className="contact">
         <Social />
-      </Element>
+      </Element>{' '}
     </div>
   );
 };
