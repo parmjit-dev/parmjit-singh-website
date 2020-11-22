@@ -132,9 +132,9 @@ const App = () => {
           <h1 className="greeting"> Welcome </h1>{' '}
           <div className="about_me_paragraph">
             <p className="about_me paragraph">
-              Greetings, my name is Parmjit Singh Gill. I am a full stack developer, who has a passion
-              for web development, learning and self development. <br /> I enjoy reading, music and of course
-              coding! as well as helping out in my community.
+              Greetings, my name is Parmjit Singh Gill. I am a full stack developer, who has a
+              passion for web development, learning and self development. <br /> I enjoy reading,
+              music and of course coding! as well as helping out in my community.
               <br /> <br />
               I have been volunteering at my local gurdwara as a guide and mentor for children and
               young adults for the past 5 years.
@@ -187,8 +187,7 @@ const App = () => {
       </div>{' '}
       <div className="project_container">
         <Element name="projects" className="project">
-          <h2 className="project-greetings"> Projects - Made From Scratch </h2>{' '}
-          <br />
+          <h2 className="project-greetings"> Projects - Made From Scratch </h2> <br />
           <h5 className="project-greetings"> Click the cards to open the app</h5>
           <div className="card_container">
             <Card
@@ -217,7 +216,7 @@ const App = () => {
           </div>{' '}
           <div
             style={{
-              height: '400px',
+              height: '600px',
             }}
           />{' '}
         </Element>{' '}
