@@ -216,9 +216,9 @@ const App = () => {
             />
             <Card
               link="https://gnkc-test.herokuapp.com/"
-              title="Client Project - Website and Homework/Quiz System"
+              title="Client Project - Website and Homework/Quiz CMS"
               image={gnkcJPG}
-              desc="This is a Web App built with a Django and PostgreSQL using AWS S3 for media storage. Also optimised for mobile and tablet view. Currently in process of migrating clients previous site. Code not avalible due to privacy."
+              desc="This is a Web App built with a Django and PostgreSQL using AWS S3 for media storage. Also optimised for mobile and tablet view. Currently in process of migrating clients previous site. Code not available due to privacy. Additional screenshots/showcase available on request"
               githubLink="https://gnkc-test.herokuapp.com/"
             />
           </div>{' '}
