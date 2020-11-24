@@ -31,13 +31,6 @@ const App = () => {
     });
   };
   useEffect(() => {
-  //   Events.scrollEvent.register('begin', () => {
-  //     console.log('start', arguments);
-  //   });
-  //   Events.scrollEvent.register('end', () => {
-  //     console.log('end', arguments);
-  //   });
-
     return function unmount() {
       Events.scrollEvent.remove('begin');
       Events.scrollEvent.remove('end');
@@ -218,7 +211,7 @@ const App = () => {
               link="https://gnkc-test.herokuapp.com/"
               title="Client Project - Website and Homework/Quiz CMS"
               image={gnkcJPG}
-              desc="This is a Web App built with a Django and PostgreSQL using AWS S3 for media storage. Also optimised for mobile and tablet view. Currently in process of migrating clients previous site. Code not available due to privacy. Additional screenshots/showcase available on request"
+              desc="This is a Web App built with a Django and PostgreSQL using AWS S3 for media storage. Also optimised for mobile and tablet view. Code not available due to privacy. Additional screenshots/showcase available on request"
               githubLink="https://gnkc-test.herokuapp.com/"
             />
           </div>{' '}
