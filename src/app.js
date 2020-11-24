@@ -15,6 +15,7 @@ import background from './images/Iceberg-Minimalist-4k-HD-Artist-4k-Wallpapers-I
 import mythosJPG from './static/mythosapi.png';
 import quizmakerJPG from './static/quiz-maker-psg.png';
 import myMuseJPG from './static/myMuseBackend.png';
+import gnkcJPG from './static/gnkcJPG.png';
 
 ReactGA.initialize('UA-181720692-1');
 
@@ -212,6 +213,13 @@ const App = () => {
               image={myMuseJPG}
               desc="This is a Web App built with a Nodejs and Graphql backend using Subscriptions and Websockets to handle realtime chat funcationality. Frontend is built with React and is currently under development"
               githubLink="https://github.com/Wolf-PSG/myMuse"
+            />
+            <Card
+              link="https://gnkc-test.herokuapp.com/"
+              title="Client Project - Website and Homework/Quiz System"
+              image={gnkcJPG}
+              desc="This is a Web App built with a Django and PostgreSQL using AWS S3 for media storage. Also optimised for mobile and tablet view. Currently in process of migrating clients previous site. Code not avalible due to privacy."
+              githubLink="https://gnkc-test.herokuapp.com/"
             />
           </div>{' '}
           <div
