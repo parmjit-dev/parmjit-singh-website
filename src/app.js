@@ -126,9 +126,9 @@ const App = () => {
           <h1 className="greeting"> Welcome </h1>{' '}
           <div className="about_me_paragraph">
             <p className="about_me paragraph">
-              Greetings, my name is Parmjit Singh Gill. I am a full stack developer, who has a
-              passion for web development, learning and self development. <br /> I enjoy reading,
-              music and of course coding! as well as helping out in my community.
+              Greetings, my name is Parmjit Singh Gill. I am a developer, who has a passion for web
+              development, learning and self improvement. <br /> I enjoy reading, music and of
+              course coding! as well as helping out in my community.
               <br /> <br />
               I have been volunteering at my local gurdwara as a guide and mentor for children and
               young adults for the past 5 years.
@@ -145,9 +145,18 @@ const App = () => {
                 <li> Studying towards obtaining my Bsc in Computer Science </li>{' '}
               </div>{' '}
               <div className="abilities-containers">
+                <div className="container-languages">
+                  <h2 className="abilities-heading"> languages </h2> <br />
+                  <li> Javascript</li> <br />
+                  <li> Python</li> <br />
+                  <li> C# - .NET </li> <br />
+                  <li> C </li> <br />
+                  <li> Java - Android Development </li> <br />
+                  <li> React Native </li> <br />
+                </div>
                 <div className="container-front">
                   <h2 className="abilities-heading"> Frontend </h2> <br />
-                  <li>Javascript - es6+ </li> <br />
+                  <li> Javascript - es6+ </li> <br />
                   <li> React - Context API + Hooks and Redux </li> <br />
                   <li> experience with Angular </li> <br />
                   <li> Jquery </li> <br />
@@ -175,7 +184,7 @@ const App = () => {
         </div>
         <div
           style={{
-            height: '500px',
+            height: '650px',
           }}
         />{' '}
       </div>{' '}
