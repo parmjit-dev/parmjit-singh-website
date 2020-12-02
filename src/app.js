@@ -83,7 +83,7 @@ const App = () => {
                   <span className="buttonCode header_btns"> About Me </span>{' '}
                 </Link>
                 <Link className="test1" to="projects" spy smooth duration={1000}>
-                  <span className="buttonCode header_btns"> Project </span>{' '}
+                  <span className="buttonCode header_btns"> Projects </span>{' '}
                 </Link>
                 <Link
                   activeClass="active"
