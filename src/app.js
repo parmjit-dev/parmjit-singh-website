@@ -14,6 +14,7 @@ import Card from './components/project_card/project_card.component';
 import background from './images/Iceberg-Minimalist-4k-HD-Artist-4k-Wallpapers-Images-.jpg';
 import mythosJPG from './static/mythosapi.png';
 import quizmakerJPG from './static/quiz-maker-psg.png';
+import quizReactJPG from './static/quiz-maker-react.png';
 import myMuseJPG from './static/myMuseBackend.png';
 import gnkcJPG from './static/gnkcJPG.png';
 
@@ -210,6 +211,14 @@ const App = () => {
               onClick={() => ReactGA.event('PROJECT', 'QUIZ PROJECT CLICKED', 'QUIZ_PAGE')}
             />{' '}
             <Card
+              link="https://quiz-maker-psg.netlify.app/"
+              title="quiz-maker Web App -- React"
+              image={quizReactJPG}
+              desc="Quiz app frontend. built with React.js. Site is currently being reworked/developed -- still usable"
+              githubLink="https://github.com/Wolf-PSG/quizPortfolioWebApp"
+              onClick={() => ReactGA.event('PROJECT', 'QUIZ PROJECT CLICKED', 'QUIZ_PAGE')}
+            />{' '}
+            <Card
               link="https://github.com/Wolf-PSG/myMuse"
               title="myMuse - real-time chat App"
               image={myMuseJPG}
@@ -225,6 +234,7 @@ const App = () => {
             />
           </div>{' '}
           <div
+            className="project_divider"
             style={{
               height: '600px',
             }}

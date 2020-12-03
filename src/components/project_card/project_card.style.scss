@@ -5,13 +5,19 @@
   height: 400px;
   text-align: center;
   border: 1px solid #edc8b5;
-  margin: 30px;
+  margin: 25px;
   padding: 15px;
 }
 
 .card-image {
   max-width: 300px;
   max-height: 400px;
+  transition: 0.2s ease;
+
+  &:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
 a {
   color: inherit;
