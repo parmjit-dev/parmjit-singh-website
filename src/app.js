@@ -24,7 +24,7 @@ import quizmakerJPG from './static/quiz-maker-psg.png';
 import quizReactJPG from './static/quiz-maker-react.png';
 import myMuseJPG from './static/myMuseBackend.png';
 import gnkcJPG from './static/gnkcJPG.png';
-import resume from './static/Parmjt_Singh_Resume.pdf';
+import resume from './static/Parmjit_Singh_Resume.pdf';
 
 ReactGA.initialize('UA-181720692-1');
 
