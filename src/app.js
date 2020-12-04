@@ -147,13 +147,14 @@ const App = () => {
               </div>{' '}
               <div className="abilities-containers">
                 <div className="container-languages">
-                  <h2 className="abilities-heading"> languages </h2> <br />
+                  <h2 className="abilities-heading"> languages & Skills</h2> <br />
                   <li> Javascript</li> <br />
                   <li> Python</li> <br />
                   <li> C# - .NET </li> <br />
                   <li> C </li> <br />
                   <li> Java - Android Development </li> <br />
                   <li> React Native </li> <br />
+                  <li> 7+ years using various linux distros </li> <br />
                 </div>
                 <div className="container-front">
                   <h2 className="abilities-heading"> Frontend </h2> <br />
