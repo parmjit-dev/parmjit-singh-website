@@ -3,6 +3,8 @@
 /* eslint-disable prefer-rest-params */
 /* eslint-disable react/jsx-filename-extension */
 import React, { useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBriefcase, faAddressCard, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { Parallax } from 'react-parallax';
 import Typewriter from 'typewriter-effect';
 import ReactGA from 'react-ga';
@@ -81,10 +83,14 @@ const App = () => {
                   smooth
                   duration={1000}
                 >
-                  <span className="buttonCode header_btns"> About Me </span>{' '}
+                  <span className="buttonCode header_btns">
+                    <FontAwesomeIcon icon={faAddressCard} size="lg" /> Resume {' '}
+                  </span>{' '}
                 </Link>
                 <Link className="test1" to="projects" spy smooth duration={1000}>
-                  <span className="buttonCode header_btns"> Projects </span>{' '}
+                  <span className="buttonCode header_btns">
+                    <FontAwesomeIcon icon={faBriefcase} size="lg" /> Projects
+                  </span>{' '}
                 </Link>
                 <Link
                   activeClass="active"
@@ -94,7 +100,10 @@ const App = () => {
                   smooth
                   duration={1500}
                 >
-                  <span className="buttonCode header_btns"> Contact </span>{' '}
+                  <span className="buttonCode header_btns">
+                    {' '}
+                    <FontAwesomeIcon icon={faEnvelope} size="lg" /> Contact{' '}
+                  </span>{' '}
                 </Link>{' '}
               </ul>{' '}
             </div>{' '}
