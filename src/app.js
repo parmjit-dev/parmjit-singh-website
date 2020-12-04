@@ -70,7 +70,7 @@ const App = () => {
         />
         <meta name="twitter:image" content="" />
       </Helmet>{' '}
-      <Parallax bgImage={background} bgImageAlt="the cat" strength={200}>
+      <Parallax bgImage={background} bgImageAlt="serenity" strength={200}>
         <nav className="navbar">
           <div className="container-fluid">
             <div className="collapse navbar-collapse">
@@ -84,7 +84,7 @@ const App = () => {
                   duration={1000}
                 >
                   <span className="buttonCode header_btns">
-                    <FontAwesomeIcon icon={faAddressCard} size="lg" /> Resume {' '}
+                    <FontAwesomeIcon icon={faAddressCard} size="lg" /> Resume{' '}
                   </span>{' '}
                 </Link>
                 <Link className="test1" to="projects" spy smooth duration={1000}>
