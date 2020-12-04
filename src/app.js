@@ -4,7 +4,12 @@
 /* eslint-disable react/jsx-filename-extension */
 import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase, faAddressCard, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBriefcase,
+  faAddressCard,
+  faEnvelope,
+  faFileDownload,
+} from '@fortawesome/free-solid-svg-icons';
 import { Parallax } from 'react-parallax';
 import Typewriter from 'typewriter-effect';
 import ReactGA from 'react-ga';
@@ -19,6 +24,7 @@ import quizmakerJPG from './static/quiz-maker-psg.png';
 import quizReactJPG from './static/quiz-maker-react.png';
 import myMuseJPG from './static/myMuseBackend.png';
 import gnkcJPG from './static/gnkcJPG.png';
+import resume from './static/parmjt_singh_resume.pdf';
 
 ReactGA.initialize('UA-181720692-1');
 
@@ -84,7 +90,7 @@ const App = () => {
                   duration={1000}
                 >
                   <span className="buttonCode header_btns">
-                    <FontAwesomeIcon icon={faAddressCard} size="lg" /> Resume{' '}
+                    <FontAwesomeIcon icon={faAddressCard} size="lg" /> Profile{' '}
                   </span>{' '}
                 </Link>
                 <Link className="test1" to="projects" spy smooth duration={1000}>
@@ -109,27 +115,37 @@ const App = () => {
             </div>{' '}
           </div>{' '}
         </nav>{' '}
-        <div className="type-container">
-          <Typewriter
-            className="typewriter"
-            options={{
-              strings: [
-                '<span style="font-size:60px;"> Parmjit Singh</span>',
-                '<span style="font-size:60px;"> Full Stack Developer</span>',
-                '<span style="font-size:60px;"> Welcome to my site.</span>',
-              ],
-              autoStart: true,
-              loop: true,
-              cursor: '<span style="font-size:60px;">|</span>',
-            }}
-          />{' '}
-        </div>{' '}
+        <div className="title_container">
+          <div className="type-container">
+            <Typewriter
+              className="typewriter"
+              options={{
+                strings: [
+                  '<span style="font-size:60px;"> Parmjit Singh</span>',
+                  '<span style="font-size:60px;"> Full Stack Developer</span>',
+                  '<span style="font-size:60px;"> Welcome to my site.</span>',
+                ],
+                autoStart: true,
+                loop: true,
+                cursor: '<span style="font-size:60px;">|</span>',
+              }}
+            />{' '}
+          </div>{' '}
+        </div>
         <div
           className="element-container"
           style={{
             height: '1000px',
           }}
         />{' '}
+        <div className="download_resume">
+          <a href={resume} download="parmjit_singh_resume.pdf">
+            <span className="buttonCode">
+              {' '}
+              <FontAwesomeIcon icon={faFileDownload} size="lg" /> Download My Resume
+            </span>
+          </a>
+        </div>
       </Parallax>{' '}
       <div name="welcome" className="welcome">
         <div className="heading_container">
@@ -195,7 +211,7 @@ const App = () => {
         </div>
         <div
           style={{
-            height: '650px',
+            height: '750px',
           }}
         />{' '}
       </div>{' '}
