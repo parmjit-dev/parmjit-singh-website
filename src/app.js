@@ -33,10 +33,6 @@ const App = () => {
     ReactGA.pageview(window.location.pathname + window.location.search);
   });
 
-  useEffect(() => {
-    setLoading(false);
-  }, []);
-
   const clickHandler = () => {
     ReactGA.event({
       category: 'Button',
