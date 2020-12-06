@@ -231,7 +231,7 @@ const App = () => {
               link="https://quiz-maker-psg.netlify.app/"
               title="quiz-maker Web App -- REST API"
               image={quizmakerJPG}
-              desc="This is a Web App built with the MERN (Mongodb, Express.js, React, Node.js) stack using AWS S3 for image storage. The Node API is hosted on heroku -- Site is currently being reworked/developed -- still usable"
+              desc="This is a Web App built with the MERN (Mongodb, Express.js, React, Node.js) stack using AWS S3 for image storage. The Node API is hosted on heroku -- Site is currently being reworked -- still usable"
               githubLink="https://github.com/Wolf-PSG/quizPortfolio"
               onClick={() => ReactGA.event('PROJECT', 'QUIZ PROJECT CLICKED', 'QUIZ_PAGE')}
             />{' '}
@@ -239,7 +239,7 @@ const App = () => {
               link="https://quiz-maker-psg.netlify.app/"
               title="quiz-maker Web App -- React"
               image={quizReactJPG}
-              desc="Quiz app frontend. built with React.js. Site is currently being reworked/developed -- still usable"
+              desc="Quiz app frontend. built with React.js. Site is currently being reworked-- still usable"
               githubLink="https://github.com/Wolf-PSG/quizPortfolioWebApp"
               onClick={() => ReactGA.event('PROJECT', 'QUIZ PROJECT CLICKED', 'QUIZ_PAGE')}
             />{' '}
