@@ -16,6 +16,7 @@ import ReactGA from 'react-ga';
 import { Link, Element, Events } from 'react-scroll';
 import './index.css';
 import Helmet from 'react-helmet';
+import Skills from './components/skills/skills.component';
 import Social from './components/social/social';
 import Card from './components/project_card/project_card.component';
 import background from './images/Iceberg-Minimalist-4k-HD-Artist-4k-Wallpapers-Images-.jpg';
@@ -75,7 +76,7 @@ const App = () => {
         />
         <meta name="twitter:image" content="" />
       </Helmet>{' '}
-      <Parallax bgImage={background} bgImageAlt="serenity" strength={200}>
+      <Parallax bgImage={background} bgImageAlt="serenity" strength={400}>
         <nav className="navbar">
           <div className="container-fluid">
             <div className="collapse navbar-collapse">
@@ -162,51 +163,12 @@ const App = () => {
             </p>{' '}
           </div>
         </div>{' '}
+        <div className="awards">
+              <h2 className="qualifications-heading"> Qualifications: </h2> <br />
+              <li> Studying towards obtaining my Bsc in Computer Science </li>
+        </div>
         <div className="qualifications">
-          <div className="skills">
-            <div className="container-skills">
-              <div className="awards">
-                <h2 className="qualifications-heading"> Qualifications: </h2> <br />
-                <li> Studying towards obtaining my Bsc in Computer Science </li>{' '}
-              </div>{' '}
-              <div className="abilities-containers">
-                <div className="container-languages">
-                  <h2 className="abilities-heading"> languages & Skills</h2> <br />
-                  <li> Javascript</li> <br />
-                  <li> Python</li> <br />
-                  <li> C# - .NET </li> <br />
-                  <li> C </li> <br />
-                  <li> Java - Android Development </li> <br />
-                  <li> React Native </li> <br />
-                  <li> 7+ years using various linux distros </li> <br />
-                </div>
-                <div className="container-front">
-                  <h2 className="abilities-heading"> Frontend </h2> <br />
-                  <li> Javascript - es6+ </li> <br />
-                  <li> React - Context API + Hooks and Redux </li> <br />
-                  <li> experience with Angular </li> <br />
-                  <li> Jquery </li> <br />
-                  <li> CSS/SCSS </li>{' '}
-                </div>{' '}
-                <div className="container-back">
-                  <h2 className="abilities-heading"> Backend </h2> <br />
-                  <li> NodeJS - ExpressJS Framework </li> <br />
-                  <li> GraphQl </li> <br />
-                  <li> Python(Django) </li> <br />
-                  <li> experience with PHP </li> <br />
-                  <li> Mongodb </li> <br />
-                  <li> Postgres </li> <br />
-                  <li> MySQL </li> <br />
-                  <li> AWS - Lambda and S3 </li> <br />
-                </div>{' '}
-                <div className="container-test">
-                  <h2 className="abilities-heading"> Testing </h2> <br />
-                  <li> Jest </li> <br />
-                  <li> Postman </li> <br />
-                </div>{' '}
-              </div>{' '}
-            </div>{' '}
-          </div>{' '}
+          <Skills />
         </div>
         <div
           style={{
