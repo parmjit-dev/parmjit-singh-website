@@ -7,7 +7,7 @@ import Typewriter from 'typewriter-effect';
 import ReactGA from 'react-ga';
 import { useSpring, animated } from 'react-spring';
 import { Element, Events } from 'react-scroll';
-import './index.css';
+import { useMediaQuery } from 'react-responsive';
 import Meta from './components/meta/meta.component';
 import Navigation from './components/navigation/navigation.component';
 import Skills from './components/skills/skills.component';
@@ -26,6 +26,13 @@ const calcRightSlow = (o) => `translateX(${o * 0.05}px)`;
 const calcLeft = (o) => `translateX(${o * -0.2}px)`;
 
 const App = () => {
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
+
+  if (isTabletOrMobile) {
+    require('./index_mobile.css');
+  } else {
+    require('./index.css');
+  }
   const ref = useRef();
   const [{ offset }, set] = useSpring(() => ({ offset: 0 }));
 
@@ -66,29 +73,15 @@ const App = () => {
       <div className="landing">
         <Navigation />
         <div className="title_container">
-          <div className="type-container">
-            <animated.div
-              className="typewriter_name"
-              style={{ transform: offset.interpolate(calcRight) }}
-            >
+          {isTabletOrMobile ? (
+            <div className="type-container">
               <Typewriter
                 options={{
-                  strings: ['<span style="font-size:60px;"> Parmjit Singh</span>'],
-                  autoStart: true,
-                  stop: true,
-                  loop: true,
-                  pausefor: 2500,
-                  cursor: '<span style="font-size:60px;">|</span>',
-                }}
-              />{' '}
-            </animated.div>
-            <animated.div
-              className="typewriter_role"
-              style={{ transform: offset.interpolate(calcLeft) }}
-            >
-              <Typewriter
-                options={{
-                  strings: ['<span style="font-size:60px;"> Full Stack Developer</span>'],
+                  strings: [
+                    '<span style="font-size:50px;"> Parmjit Singh </span>',
+                    '<span style="font-size:50px;">Full-Stack Developer</span>',
+                    '<span style="font-size:50px;"> Welcome to my site.</span>',
+                  ],
                   autoStart: true,
                   stop: true,
                   loop: true,
@@ -96,80 +89,126 @@ const App = () => {
                   cursor: '<span style="font-size:60px;">|</span>',
                 }}
               />
-            </animated.div>
-            <animated.div
-              className="typewriter_welcome"
-              style={{ transform: offset.interpolate(calcRight) }}
-            >
-              <Typewriter
-                options={{
-                  strings: ['<span style="font-size:60px;"> Welcome to my site.</span>'],
-                  autoStart: true,
-                  stop: true,
-                  loop: true,
-                  pausefor: 2500,
-                  cursor: '<span style="font-size:60px;">|</span>',
-                }}
-              />
-            </animated.div>
-          </div>{' '}
+            </div>
+          ) : (
+            <div className="type-container">
+              <animated.div
+                className="typewriter_name"
+                style={{ transform: offset.interpolate(calcRight) }}
+              >
+                <Typewriter
+                  options={{
+                    strings: ['<span style="font-size:60px;"> Parmjit Singh</span>'],
+                    autoStart: true,
+                    stop: true,
+                    loop: true,
+                    pausefor: 2500,
+                    cursor: '<span style="font-size:60px;">|</span>',
+                  }}
+                />{' '}
+              </animated.div>
+              <animated.div
+                className="typewriter_role"
+                style={{ transform: offset.interpolate(calcLeft) }}
+              >
+                <Typewriter
+                  options={{
+                    strings: ['<span style="font-size:60px;"> Full Stack Developer</span>'],
+                    autoStart: true,
+                    stop: true,
+                    loop: true,
+                    pausefor: 2500,
+                    cursor: '<span style="font-size:60px;">|</span>',
+                  }}
+                />
+              </animated.div>
+              <animated.div
+                className="typewriter_welcome"
+                style={{ transform: offset.interpolate(calcRight) }}
+              >
+                <Typewriter
+                  options={{
+                    strings: ['<span style="font-size:60px;"> Welcome to my site.</span>'],
+                    autoStart: true,
+                    stop: true,
+                    loop: true,
+                    pausefor: 2500,
+                    cursor: '<span style="font-size:60px;">|</span>',
+                  }}
+                />
+              </animated.div>
+            </div>
+          )}
         </div>
       </div>
       <div name="welcome" className="welcome">
         <Element name="welcome" className="element_welcome_container">
           <div className="heading_container">
             <div className="about_me_paragraph">
-              <animated.h1
-                className="about_1"
-                style={{
-                  transform: offset.interpolate((x) => `translateX(${x * 0.01}px)`),
-                }}
-              >
-                Hard Working
-              </animated.h1>
-              <animated.h1
-                className="about_2"
-                style={{
-                  transform: offset.interpolate((x) => `translateX(${x * 0.03}px)`),
-                }}
-              >
-                {' '}
-                And Driven.
-              </animated.h1>
-              <animated.h1
-                className="about_3"
-                style={{
-                  transform: offset.interpolate((x) => `translateX(${x * 0.05}px)`),
-                }}
-              >
-                I am Motivated
-              </animated.h1>
-              <animated.h1
-                className="about_4"
-                style={{
-                  transform: offset.interpolate((x) => `translateX(${x * 0.07}px)`),
-                }}
-              >
-                to Creating
-              </animated.h1>
-              <animated.h1
-                className="about_5"
-                style={{
-                  transform: offset.interpolate((x) => `translateX(${x * 0.09}px)`),
-                }}
-              >
-                {' '}
-                Clean and{' '}
-              </animated.h1>
-              <animated.h1
-                className="about_6"
-                style={{
-                  transform: offset.interpolate((x) => `translateX(${x * 0.11}px)`),
-                }}
-              >
-                {' '}
-                Performant Code
-              </animated.h1>
+              {isTabletOrMobile ? (
+                <div>
+                  <h1>Hard Working</h1>
+                  <h1>And Driven</h1>
+                  <h1>I Am Motivated</h1>
+                  <h1>To Creating</h1>
+                  <h1>Clean And</h1>
+                  <h1>Performant Code</h1>
+                </div>
+              ) : (
+                <div>
+                  <animated.h1
+                    className="about_1"
+                    style={{
+                      transform: offset.interpolate((x) => `translateX(${x * 0.01}px)`),
+                    }}
+                  >
+                    Hard Working
+                  </animated.h1>
+                  <animated.h1
+                    className="about_2"
+                    style={{
+                      transform: offset.interpolate((x) => `translateX(${x * 0.03}px)`),
+                    }}
+                  >
+                    {' '}
+                    And Driven.
+                  </animated.h1>
+                  <animated.h1
+                    className="about_3"
+                    style={{
+                      transform: offset.interpolate((x) => `translateX(${x * 0.05}px)`),
+                    }}
+                  >
+                    I Am Motivated
+                  </animated.h1>
+                  <animated.h1
+                    className="about_4"
+                    style={{
+                      transform: offset.interpolate((x) => `translateX(${x * 0.07}px)`),
+                    }}
+                  >
+                    to Creating
+                  </animated.h1>
+                  <animated.h1
+                    className="about_5"
+                    style={{
+                      transform: offset.interpolate((x) => `translateX(${x * 0.09}px)`),
+                    }}
+                  >
+                    {' '}
+                    Clean and{' '}
+                  </animated.h1>
+                  <animated.h1
+                    className="about_6"
+                    style={{
+                      transform: offset.interpolate((x) => `translateX(${x * 0.11}px)`),
+                    }}
+                  >
+                    {' '}
+                    Performant Code
+                  </animated.h1>
+                </div>
+              )}
             </div>
           </div>
           <div className="qualifications">
