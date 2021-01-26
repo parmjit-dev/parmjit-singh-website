@@ -1,25 +1,70 @@
+@media screen and (max-width: 1224px) {
+  .card {
+    float: left;
+    width: 300px;
+    min-height: 400px;
+    text-align: center;
+    background: #ac3b61;
+    margin: 20px;
+    padding: 15px;
+  }
+  .card-image {
+    float: left;
+    max-width: 300px;
+    max-height: 400px;
+    min-height: 200px;
+    transition: 0.2s ease;
+
+    &:hover {
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05);
+    }
+  }
+  .font_icon {
+    color: #edc7b7;
+
+    &:hover {
+      color: #123c69;
+      transition: all 0.4s ease 0s;
+    }
+  }
+  a {
+    color: #edc7b7;
+    text-decoration: none;
+  }
+}
 .card {
-  // position: absolute;
   float: left;
-  width: 300px;
-  height: 400px;
+  width: 600px;
+  height: 200px;
   text-align: center;
-  border: 1px solid #edc8b5;
+  background: #ac3b61;
+  border-radius: 10px;
   margin: 20px;
   padding: 15px;
 }
 
 .card-image {
+  float: left;
   max-width: 300px;
   max-height: 400px;
+  min-height: 200px;
   transition: 0.2s ease;
 
   &:hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+.font_icon {
+  color: #edc7b7;
+
+  &:hover {
+    color: #123c69;
+    transition: all 0.4s ease 0s;
   }
 }
 a {
-  color: inherit;
+  color: #edc7b7;
   text-decoration: none;
 }

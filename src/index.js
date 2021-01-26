@@ -4,7 +4,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { transitions, positions, Provider as AlertProvider } from 'react-alert';
-import { ParallaxProvider } from 'react-scroll-parallax';
 import AlertTemplate from './components/alerts/alert.template';
 import './index.css';
 import App from './app';
@@ -19,11 +18,9 @@ const options = {
 };
 
 const Root = () => (
-  <ParallaxProvider>
     <AlertProvider template={AlertTemplate} {...options}>
       <App />
     </AlertProvider>
-  </ParallaxProvider>
 );
 
 render(<Root />, document.getElementById('root'));

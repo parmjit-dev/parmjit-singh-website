@@ -1,0 +1,34 @@
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #123c69;
+  overflow-x: hidden;
+  transition: 0.5s;
+
+  .closeButton {
+      padding: 25px;
+  }
+
+  .sidenav_btn{
+    padding: 15px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #edc7b7;
+    display: block;
+    transition: 0.3s;
+    padding-top: 80px;
+  }
+}
+
+.icon {
+  background: #123c69;;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 10;
+  padding: 30px;
+}

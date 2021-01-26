@@ -2,34 +2,47 @@
 /* eslint-disable no-undef */
 /* eslint-disable prefer-rest-params */
 /* eslint-disable react/jsx-filename-extension */
-import React, { useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faBriefcase,
-  faAddressCard,
-  faEnvelope,
-  faFileDownload,
-} from '@fortawesome/free-solid-svg-icons';
-import { Parallax } from 'react-parallax';
+import React, { useEffect, useRef } from 'react';
 import Typewriter from 'typewriter-effect';
 import ReactGA from 'react-ga';
-import { Link, Element, Events } from 'react-scroll';
+import { useSpring, animated } from 'react-spring';
+import { Element, Events } from 'react-scroll';
 import './index.css';
-import Helmet from 'react-helmet';
+import Meta from './components/meta/meta.component';
+import Navigation from './components/navigation/navigation.component';
 import Skills from './components/skills/skills.component';
 import Social from './components/social/social';
 import Card from './components/project_card/project_card.component';
-import background from './images/Iceberg-Minimalist-4k-HD-Artist-4k-Wallpapers-Images-.jpg';
 import mythosJPG from './static/mythosapi.png';
+import birdJPG from './static/main_image.jpg';
 import quizmakerJPG from './static/quiz-maker-psg.png';
 import quizReactJPG from './static/quiz-maker-react.png';
 import myMuseJPG from './static/myMuseBackend.png';
 import gnkcJPG from './static/gnkcJPG.png';
-import resume from './static/Parmjit_Singh_Resume.pdf';
-
 ReactGA.initialize('UA-181720692-1');
 
+const calcRight = (o) => `translateX(${o * 0.2}px)`;
+const calcRightSlow = (o) => `translateX(${o * 0.05}px)`;
+const calcLeft = (o) => `translateX(${o * -0.2}px)`;
+
 const App = () => {
+  const ref = useRef();
+  const [{ offset }, set] = useSpring(() => ({ offset: 0 }));
+
+  const handleScroll = () => {
+    const posY = ref.current.getBoundingClientRect().top;
+    const offset = window.pageYOffset - posY;
+    set({ offset });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
+
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
   });
@@ -46,140 +59,131 @@ const App = () => {
       Events.scrollEvent.remove('end');
     };
   });
+
   return (
-    <div>
-      <Helmet>
-        <title> Parmjit.Dev </title>{' '}
-        <meta
-          name="description"
-          content="Portfolio Site of Parmjit Singh Gill. Full Stack Developer, BSc Computer Science, 21."
-        />
-        <meta itemProp="name" content="Parmjit.Dev" />
-        <meta
-          itemProp="description"
-          content="Portfolio Site of Parmjit Singh Gill. Full Stack Developer, BSc Computer Science, 21."
-        />
-        <meta itemProp="image" content="" />
-        <meta property="og:url" content="https://parmjit.dev" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Parmjit.dev" />
-        <meta
-          property="og:description"
-          content="Portfolio Site of Parmjit Singh Gill. Full Stack Developer, BSc Computer Science, 21."
-        />
-        <meta property="og:image" content="" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Parmjit.Dev" />
-        <meta
-          name="twitter:description"
-          content="Portfolio Site of Parmjit Singh Gill. Full Stack Developer, BSc Computer Science, 21."
-        />
-        <meta name="twitter:image" content="" />
-      </Helmet>{' '}
-      <Parallax bgImage={background} bgImageAlt="serenity" strength={400}>
-        <nav className="navbar">
-          <div className="container-fluid">
-            <div className="collapse navbar-collapse">
-              <ul className="nav navbar-nav">
-                <Link
-                  activeClass="active"
-                  className="test1"
-                  to="welcome"
-                  spy
-                  smooth
-                  duration={1000}
-                >
-                  <span className="buttonCode header_btns">
-                    <FontAwesomeIcon icon={faAddressCard} size="lg" /> Profile{' '}
-                  </span>{' '}
-                </Link>
-                <Link className="test1" to="projects" spy smooth duration={1000}>
-                  <span className="buttonCode header_btns">
-                    <FontAwesomeIcon icon={faBriefcase} size="lg" /> Projects
-                  </span>{' '}
-                </Link>
-                <Link
-                  activeClass="active"
-                  className="test1"
-                  to="contact"
-                  spy
-                  smooth
-                  duration={1500}
-                >
-                  <span className="buttonCode header_btns">
-                    {' '}
-                    <FontAwesomeIcon icon={faEnvelope} size="lg" /> Contact{' '}
-                  </span>{' '}
-                </Link>{' '}
-              </ul>{' '}
-            </div>{' '}
-          </div>{' '}
-        </nav>{' '}
+    <div className="page" ref={ref}>
+      <Meta />
+      <div className="landing">
+        <Navigation />
         <div className="title_container">
           <div className="type-container">
-            <Typewriter
-              className="typewriter"
-              options={{
-                strings: [
-                  '<span style="font-size:60px;"> Parmjit Singh</span>',
-                  '<span style="font-size:60px;"> Full Stack Developer</span>',
-                  '<span style="font-size:60px;"> Welcome to my site.</span>',
-                ],
-                autoStart: true,
-                loop: true,
-                cursor: '<span style="font-size:60px;">|</span>',
-              }}
-            />{' '}
+            <animated.div
+              className="typewriter_name"
+              style={{ transform: offset.interpolate(calcRight) }}
+            >
+              <Typewriter
+                options={{
+                  strings: ['<span style="font-size:60px;"> Parmjit Singh</span>'],
+                  autoStart: true,
+                  stop: true,
+                  loop: true,
+                  pausefor: 2500,
+                  cursor: '<span style="font-size:60px;">|</span>',
+                }}
+              />{' '}
+            </animated.div>
+            <animated.div
+              className="typewriter_role"
+              style={{ transform: offset.interpolate(calcLeft) }}
+            >
+              <Typewriter
+                options={{
+                  strings: ['<span style="font-size:60px;"> Full Stack Developer</span>'],
+                  autoStart: true,
+                  stop: true,
+                  loop: true,
+                  pausefor: 2500,
+                  cursor: '<span style="font-size:60px;">|</span>',
+                }}
+              />
+            </animated.div>
+            <animated.div
+              className="typewriter_welcome"
+              style={{ transform: offset.interpolate(calcRight) }}
+            >
+              <Typewriter
+                options={{
+                  strings: ['<span style="font-size:60px;"> Welcome to my site.</span>'],
+                  autoStart: true,
+                  stop: true,
+                  loop: true,
+                  pausefor: 2500,
+                  cursor: '<span style="font-size:60px;">|</span>',
+                }}
+              />
+            </animated.div>
           </div>{' '}
         </div>
-        <div
-          className="element-container"
-          style={{
-            height: '1000px',
-          }}
-        />{' '}
-        <div className="download_resume">
-          <a href={resume} download="Parmjit_Singh_Resume.pdf">
-            <span className="buttonCode">
-              {' '}
-              <FontAwesomeIcon icon={faFileDownload} size="lg" /> Download My Resume
-            </span>
-          </a>
-        </div>
-      </Parallax>{' '}
+      </div>
       <div name="welcome" className="welcome">
-        <div className="heading_container">
-          <h1 className="greeting"> Welcome </h1>{' '}
-          <div className="about_me_paragraph">
-            <p className="about_me paragraph">
-              Greetings, my name is Parmjit Singh Gill. I am a developer, who has a passion for web
-              development, learning and self improvement. <br /> I enjoy reading, music and of
-              course coding! as well as helping out in my community.
-              <br /> <br />
-              I have been volunteering at my local gurdwara as a guide and mentor for children and
-              young adults for the past 5 years.
-              <br /> I also have studied two instruments (Harmonium and tabla) to a semi
-              professional level
-            </p>{' '}
+        <Element name="welcome" className="element_welcome_container">
+          <div className="heading_container">
+            <div className="about_me_paragraph">
+              <animated.h1
+                className="about_1"
+                style={{
+                  transform: offset.interpolate((x) => `translateX(${x * 0.01}px)`),
+                }}
+              >
+                Hard Working
+              </animated.h1>
+              <animated.h1
+                className="about_2"
+                style={{
+                  transform: offset.interpolate((x) => `translateX(${x * 0.03}px)`),
+                }}
+              >
+                {' '}
+                And Driven.
+              </animated.h1>
+              <animated.h1
+                className="about_3"
+                style={{
+                  transform: offset.interpolate((x) => `translateX(${x * 0.05}px)`),
+                }}
+              >
+                I am Motivated
+              </animated.h1>
+              <animated.h1
+                className="about_4"
+                style={{
+                  transform: offset.interpolate((x) => `translateX(${x * 0.07}px)`),
+                }}
+              >
+                to Creating
+              </animated.h1>
+              <animated.h1
+                className="about_5"
+                style={{
+                  transform: offset.interpolate((x) => `translateX(${x * 0.09}px)`),
+                }}
+              >
+                {' '}
+                Clean and{' '}
+              </animated.h1>
+              <animated.h1
+                className="about_6"
+                style={{
+                  transform: offset.interpolate((x) => `translateX(${x * 0.11}px)`),
+                }}
+              >
+                {' '}
+                Performant Code
+              </animated.h1>
+            </div>
           </div>
-        </div>{' '}
-        <div className="awards">
-              <h2 className="qualifications-heading"> Qualifications: </h2> <br />
-              <li> Studying towards obtaining my Bsc in Computer Science </li>
-        </div>
-        <div className="qualifications">
-          <Skills />
-        </div>
-        <div
-          style={{
-            height: '750px',
-          }}
-        />{' '}
-      </div>{' '}
+          <div className="qualifications">
+            <div className="skill_container">
+              <h1> My Skills</h1>
+              <Skills />
+            </div>
+          </div>
+        </Element>
+      </div>
       <div className="project_container">
-        <Element name="projects" className="project">
+        <Element name="projects">
           <h2 className="project-greetings"> Projects - Made From Scratch </h2> <br />
-          <h5 className="project-greetings"> Click the cards to open the app</h5>
+          <h5 className="project-hint"> Click the cards to open the app</h5>
           <div className="card_container">
             <Card
               link="https://mythosapi.herokuapp.com/"
@@ -220,17 +224,13 @@ const App = () => {
               githubLink="https://gnkc-test.herokuapp.com/"
             />
           </div>{' '}
-          <div
-            className="project_divider"
-            style={{
-              height: '600px',
-            }}
-          />{' '}
-        </Element>{' '}
+        </Element>
       </div>
-      <Element name="contact" className="contact">
-        <Social />
-      </Element>{' '}
+      <div className="contacts_container">
+        <Element name="contacts">
+          <Social />
+        </Element>
+      </div>
     </div>
   );
 };
