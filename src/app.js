@@ -14,22 +14,25 @@ import Skills from './components/skills/skills.component';
 import Social from './components/social/social';
 import Card from './components/project_card/project_card.component';
 import mythosJPG from './static/mythosapi.png';
-import birdJPG from './static/main_image.jpg';
 import quizmakerJPG from './static/quiz-maker-psg.png';
 import quizReactJPG from './static/quiz-maker-react.png';
 import myMuseJPG from './static/myMuseBackend.png';
 import gnkcJPG from './static/gnkcJPG.png';
+import wavePNG from './static/birds.png';
 ReactGA.initialize('UA-181720692-1');
 
 const calcRight = (o) => `translateX(${o * 0.2}px)`;
-const calcRightSlow = (o) => `translateX(${o * 0.05}px)`;
 const calcLeft = (o) => `translateX(${o * -0.2}px)`;
 
 const App = () => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
+  const isBigScreen = useMediaQuery({ minDeviceWidth: 1824 });
 
   if (isTabletOrMobile) {
     require('./index_mobile.css');
+  } else if (isBigScreen) {
+    console.log('big');
+    require('./index_4k.css');
   } else {
     require('./index.css');
   }
@@ -72,6 +75,7 @@ const App = () => {
       <Meta />
       <div className="landing">
         <Navigation />
+        <img src={wavePNG} className="landing_wave" />
         <div className="title_container">
           {isTabletOrMobile ? (
             <div className="type-container">
@@ -89,6 +93,54 @@ const App = () => {
                   cursor: '<span style="font-size:60px;">|</span>',
                 }}
               />
+            </div>
+          ) : isBigScreen ? (
+            <div className="type-container">
+              <animated.div
+                className="typewriter_name"
+                style={{ transform: offset.interpolate(calcRight) }}
+              >
+                <Typewriter
+                  options={{
+                    strings: ['<span style="font-size:80px;"> Parmjit Singh</span>'],
+                    autoStart: true,
+                    stop: true,
+                    loop: true,
+                    pausefor: 2500,
+                    cursor: '<span style="font-size:80px;">|</span>',
+                  }}
+                />{' '}
+              </animated.div>
+              <animated.div
+                className="typewriter_role"
+                style={{ transform: offset.interpolate(calcLeft) }}
+              >
+                <Typewriter
+                  options={{
+                    strings: ['<span style="font-size:80px;"> Full Stack Developer</span>'],
+                    autoStart: true,
+                    stop: true,
+                    loop: true,
+                    pausefor: 2500,
+                    cursor: '<span style="font-size:80px;">|</span>',
+                  }}
+                />
+              </animated.div>
+              <animated.div
+                className="typewriter_welcome"
+                style={{ transform: offset.interpolate(calcRight) }}
+              >
+                <Typewriter
+                  options={{
+                    strings: ['<span style="font-size:80px;"> Welcome to my site.</span>'],
+                    autoStart: true,
+                    stop: true,
+                    loop: true,
+                    pausefor: 2500,
+                    cursor: '<span style="font-size:80px;">|</span>',
+                  }}
+                />
+              </animated.div>
             </div>
           ) : (
             <div className="type-container">
@@ -252,15 +304,15 @@ const App = () => {
               link="https://github.com/Wolf-PSG/myMuse"
               title="myMuse - real-time chat App"
               image={myMuseJPG}
-              desc="This is a Web App built with a Nodejs and Graphql backend using Subscriptions and Websockets to handle realtime chat funcationality. Frontend is built with React and is currently under development"
+              desc="This is a Web App built with a Nodejs and Graphql backend using Subscriptions and Websockets to handle realtime chat. Frontend is built with React and is currently under development"
               githubLink="https://github.com/Wolf-PSG/myMuse"
             />
             <Card
               link="https://gnkc-test.herokuapp.com/"
               title="Client Project - Website and Homework/Quiz CMS"
               image={gnkcJPG}
-              desc="This is a Web App built with a Django and PostgreSQL using AWS S3 for media storage. Also optimised for mobile and tablet view. Code not available due to privacy. Additional screenshots/showcase available on request"
-              githubLink="https://gnkc-test.herokuapp.com/"
+              desc="This is a Web App built with a Django and PostgreSQL using AWS S3 for media storage. Also optimised for mobile and tablet view. Code not available due to privacy."
+              githubLink="N/A"
             />
           </div>{' '}
         </Element>

@@ -1,9 +1,39 @@
+body {
+	margin: 0;
+	font-family: 'PT Serif', serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: #edc8b5;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+li {
+	list-style: none;
+}
+
+code {
+	font-family: 'PT Serif', serif;
+}
+
+h2 {
+	margin: 0;
+	padding: 0;
+}
+
 .header_btns {
 	position: relative;
 	width: auto;
 	right: 22px;
 	margin: 0px;
 	padding: 0px;
+}
+
+.landing_wave {
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
 }
 
 .type-container {
@@ -103,27 +133,4 @@
 .project-hint {
 	padding-top: 30px;
 	text-align: center;
-}
-
-body {
-	margin: 0;
-	font-family: 'Ubuntu', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	color: #edc8b5;
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
-}
-
-li {
-	list-style: none;
-}
-
-code {
-	font-family: 'Ubuntu', sans-serif;
-}
-
-h2 {
-	margin: 0;
-	padding: 0;
 }
