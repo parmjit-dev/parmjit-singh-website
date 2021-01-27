@@ -25,7 +25,7 @@ const calcRight = (o) => `translateX(${o * 0.2}px)`;
 const calcLeft = (o) => `translateX(${o * -0.2}px)`;
 
 const App = () => {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1240px)' });
   const isBigScreen = useMediaQuery({ minDeviceWidth: 1824 });
 
   if (isTabletOrMobile) {
@@ -262,6 +262,17 @@ const App = () => {
                 </div>
               )}
             </div>
+          </div>
+          <div className="about_me_paragraph_container">
+            <p className="about_me paragraph_p">
+              Greetings, I am a developer, who has a passion for <strong> web development</strong>,
+              learning and self improvement. <br /> <br />I enjoy reading, music and of course
+              <strong> coding!</strong> as well as helping out in my community.
+              <br /> <br />
+              I have been volunteering at my local gurdwara as a guide and mentor for children and
+              young adults for the past 5 years.
+              <br /> I also study two instruments (Harmonium and tabla) to a semi professional level
+            </p>{' '}
           </div>
           <div className="qualifications">
             <div className="skill_container">

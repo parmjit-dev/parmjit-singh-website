@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faBars,
-  faArrowLeft,
-  faBriefcase,
-  faAddressCard,
-  faEnvelope,
-  faFileDownload,
-} from '@fortawesome/free-solid-svg-icons';
+import { faBars, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-scroll';
 import './navigation.style.scss';
 import resume from '../../static/Parmjit_Singh_Resume.pdf';
@@ -17,7 +10,7 @@ const Navigation = () => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
   const [width, setWidth] = useState(0);
   const openNav = () => {
-    setWidth(250);
+    setWidth(200);
   };
   const closeNav = () => {
     setWidth(0);
@@ -26,9 +19,9 @@ const Navigation = () => {
     <div className="navigation">
       {isTabletOrMobile ? (
         <div className="mobileNav">
-          <span class="icon" id="icon" onClick={openNav}>
-            <FontAwesomeIcon icon={faBars} size="lg" />
-          </span>
+          <div class="icon" id="icon" onClick={openNav}>
+            <FontAwesomeIcon icon={faBars} size="lg" onClick={openNav} />
+          </div>
           <div class="sidenav" id="sidenav" style={{ width: width }}>
             <span onClick={closeNav} className="closeButton">
               <FontAwesomeIcon icon={faArrowLeft} size="3x" />

@@ -139,6 +139,11 @@ h2 {
 	position: relative;
 	overflow: hidden;
 }
+
+.about_me_paragraph_container {
+    text-align: center;
+    font-size: 30px;
+}
 .heading_container {
 	min-height: 700px;
 	position: relative;
@@ -195,7 +200,7 @@ h2 {
 	position: relative;
 	background: #123c69;
 	color: #ac3b61;
-	min-height: 1700px;
+	min-height: 1600px;
 	align-items: center;
 	width: 100%;
 }

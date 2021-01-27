@@ -127,6 +127,10 @@ h2 {
 	width: auto;
 	overflow: hidden;
 }
+.about_me_paragraph_container {
+	text-align: center;
+	font-size: 30px;
+}
 .heading_container {
 	min-height: 700px;
 	position: relative;
@@ -166,7 +170,7 @@ h2 {
 	padding: 50px;
 	background-color: #eee2dc;
 	border-radius: 10px;
-	box-shadow: rgb(117, 118, 136);
+	box-shadow: 10px 20px #888888;
 	color: #123c69;
 	/* max-width: 550px; */
 	min-height: 400px;
