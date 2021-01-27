@@ -2,17 +2,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
-import { useMediaQuery } from 'react-responsive';
-
+import './project_card.style.scss';
 const Card = ({ link, image, title, desc, githubLink }) => {
-  const isBigScreen = useMediaQuery({ minDeviceWidth: 2560 });
-
-  if (isBigScreen) {
-    require('./project_card_4k.style.scss');
-  } else {
-    require('./project_card.style.scss');
-  }
-
   return (
     <div className="card">
       <a href={link} target="_blank" rel="noopener noreferrer">

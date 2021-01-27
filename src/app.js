@@ -19,6 +19,7 @@ import quizReactJPG from './static/quiz-maker-react.png';
 import myMuseJPG from './static/myMuseBackend.png';
 import gnkcJPG from './static/gnkcJPG.png';
 import wavePNG from './static/birds.png';
+import './index.css';
 ReactGA.initialize('UA-181720692-1');
 
 const calcRight = (o) => `translateX(${o * 0.2}px)`;
@@ -28,13 +29,6 @@ const App = () => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' });
   const isBigScreen = useMediaQuery({ minDeviceWidth: 2560 });
 
-  if (isTabletOrMobile) {
-    require('./index_mobile.css');
-  } else if (isBigScreen) {
-    require('./index_4k.css');
-  } else {
-    require('./index.css');
-  }
   const ref = useRef();
   const [{ offset }, set] = useSpring(() => ({ offset: 0 }));
 
@@ -199,11 +193,11 @@ const App = () => {
               {isTabletOrMobile ? (
                 <div>
                   <h1>Hard Working</h1>
-                  <h1>And Driven</h1>
-                  <h1>I Am Motivated</h1>
+                  <h1>And Driven.</h1>
+                  <h1>Motivated</h1>
                   <h1>To Creating</h1>
                   <h1>Clean And</h1>
-                  <h1>Performant Code</h1>
+                  <h1>Performant Code.</h1>
                 </div>
               ) : (
                 <div>
