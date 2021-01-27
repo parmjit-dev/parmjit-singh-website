@@ -31,7 +31,6 @@ const App = () => {
   if (isTabletOrMobile) {
     require('./index_mobile.css');
   } else if (isBigScreen) {
-    console.log('big');
     require('./index_4k.css');
   } else {
     require('./index.css');
@@ -75,7 +74,7 @@ const App = () => {
       <Meta />
       <div className="landing">
         <Navigation />
-        <img src={wavePNG} className="landing_wave" />
+        <img src={wavePNG} className="landing_wave" alt="birds resting on branch" />
         <div className="title_container">
           {isTabletOrMobile ? (
             <div className="type-container">

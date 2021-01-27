@@ -79,8 +79,11 @@ const Skills = () => {
       )}
       {skill !== '' ? (
         <div>
-          {skillOptions[skill].map((value) => (
-            <h3 className="skill"> {value} </h3>
+          {skillOptions[skill].map((value, index) => (
+            <h3 className="skill" key={`${value}:${index + 1}`}>
+              {' '}
+              {value}{' '}
+            </h3>
           ))}
         </div>
       ) : (

@@ -19,10 +19,10 @@ const Navigation = () => {
     <div className="navigation">
       {isTabletOrMobile ? (
         <div className="mobileNav">
-          <div class="icon" id="icon" onClick={openNav}>
+          <div className="icon" id="icon" onClick={openNav}>
             <FontAwesomeIcon icon={faBars} size="lg" onClick={openNav} />
           </div>
-          <div class="sidenav" id="sidenav" style={{ width: width }}>
+          <div className="sidenav" id="sidenav" style={{ width: width }}>
             <span onClick={closeNav} className="closeButton">
               <FontAwesomeIcon icon={faArrowLeft} size="3x" />
             </span>
