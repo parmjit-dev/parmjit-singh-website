@@ -46,7 +46,7 @@ const Navigation = () => {
               to="contacts"
               spy
               smooth
-              duration={1500}
+              duration={3000}
             >
               <span className="sidenav_btn">Contact</span>
             </Link>

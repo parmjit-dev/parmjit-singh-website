@@ -30,9 +30,16 @@ h2 {
 /****************************************LANDING*********************************************/
 .landing {
 	background: #edc7b7;
-	min-height: 1000px;
+	min-height: 100vh;
 	height: auto;
 	justify-content: center;
+}
+
+.landing_wave {
+	width: 40%;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
 }
 
 .navigation {
@@ -113,6 +120,8 @@ h2 {
 
 .element_welcome_container {
 	width: 100%;
+	justify-content: center;
+	position: relative;
 }
 
 .greeting {
@@ -126,6 +135,8 @@ h2 {
 	font-size: 30px;
 	width: auto;
 	overflow: hidden;
+	left: 10%;
+	position: relative;
 }
 .about_me_paragraph_container {
 	text-align: center;
@@ -187,7 +198,7 @@ h2 {
 	position: relative;
 	background: #123c69;
 	color: #ac3b61;
-	min-height: 1700px;
+	min-height: 1200px;
 	align-items: center;
 	width: 100%;
 }

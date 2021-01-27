@@ -20,6 +20,11 @@ h2 {
 	margin: 0;
 	padding: 0;
 }
+.landing {
+	background: #edc7b7;
+	min-height: 100vh;
+	justify-content: center;
+}
 
 .header_btns {
 	position: relative;
@@ -44,18 +49,18 @@ h2 {
 	margin-right: 50px;
 	word-wrap: break-word;
 	overflow: hidden;
-	/* max-width: 100%; */
 }
 .about_me_paragraph {
 	justify-content: center;
 	word-wrap: break-word;
-	font-size: 30px;
-	width: auto;
+	font-size: 25px;
+	left: 0;
 	overflow: hidden;
 }
 .about_me_paragraph_container {
 	text-align: center;
-	font-size: 30px;
+	font-size: 20px;
+	word-wrap: break-word;
 }
 .heading_container {
 	min-height: 700px;
@@ -79,6 +84,18 @@ h2 {
 }
 .about_6 {
 	padding-left: 0px;
+}
+
+.skill_container {
+	padding: 50px;
+	background-color: #eee2dc;
+	border-radius: 10px;
+	box-shadow: 10px 20px #888888;
+	color: #123c69;
+	max-width: 80vh;
+	min-height: 400px;
+	text-align: center;
+	align-items: center;
 }
 .project_container {
 	justify-content: center;

@@ -5,7 +5,7 @@ import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { useMediaQuery } from 'react-responsive';
 
 const Card = ({ link, image, title, desc, githubLink }) => {
-  const isBigScreen = useMediaQuery({ minDeviceWidth: 1824 });
+  const isBigScreen = useMediaQuery({ minDeviceWidth: 2560 });
 
   if (isBigScreen) {
     require('./project_card_4k.style.scss');

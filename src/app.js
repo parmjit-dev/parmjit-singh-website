@@ -25,8 +25,8 @@ const calcRight = (o) => `translateX(${o * 0.2}px)`;
 const calcLeft = (o) => `translateX(${o * -0.2}px)`;
 
 const App = () => {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1240px)' });
-  const isBigScreen = useMediaQuery({ minDeviceWidth: 1824 });
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isBigScreen = useMediaQuery({ minDeviceWidth: 2560 });
 
   if (isTabletOrMobile) {
     require('./index_mobile.css');
