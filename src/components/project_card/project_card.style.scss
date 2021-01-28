@@ -35,7 +35,7 @@
   }
 }
 
-@media only screen and (min-width: 2560px) {
+@media only screen and (min-width: 1921px) {
   .card {
     float: left;
     width: 1000px;
@@ -73,38 +73,41 @@
     text-decoration: none;
   }
 }
-.card {
-  float: left;
-  width: 600px;
-  height: 200px;
-  text-align: center;
-  background: #ac3b61;
-  border-radius: 10px;
-  margin: 20px;
-  padding: 15px;
-}
 
-.card-image {
-  float: left;
-  max-width: 300px;
-  max-height: 400px;
-  min-height: 200px;
-  transition: 0.2s ease;
-
-  &:hover {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
+@media only screen and (max-width: 1920px) {
+  .card {
+    float: left;
+    width: 600px;
+    height: 200px;
+    text-align: center;
+    background: #ac3b61;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 15px;
   }
-}
-.font_icon {
-  color: #edc7b7;
 
-  &:hover {
-    color: #123c69;
-    transition: all 0.4s ease 0s;
+  .card-image {
+    float: left;
+    max-width: 300px;
+    max-height: 400px;
+    min-height: 200px;
+    transition: 0.2s ease;
+
+    &:hover {
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05);
+    }
   }
-}
-a {
-  color: #edc7b7;
-  text-decoration: none;
+  .font_icon {
+    color: #edc7b7;
+
+    &:hover {
+      color: #123c69;
+      transition: all 0.4s ease 0s;
+    }
+  }
+  a {
+    color: #edc7b7;
+    text-decoration: none;
+  }
 }
