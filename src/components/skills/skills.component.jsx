@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import './skills.style.scss';
 const skillOptions = {
-  languages: ['Python', 'Javascript', 'C#', 'C', 'Java - Android Studio', 'React Native'],
+  languages: ['Python', 'PHP',   'Javascript', 'C#', 'C', 'Java - Android Studio', 'React Native'],
   frontend: [
     'React - Context API + Hooks & Redux',
+    'Vue 3- Composition API + Vuex',
     'Experience With Angular',
     'JQuery',
     'CSS/SCSS',
@@ -14,7 +15,7 @@ const skillOptions = {
     'Django',
     'Node.JS - Express framework',
     'GraphQL',
-    'Experience With PHP',
+    'Laravel - with Laravel Websockets',
     'MongoDB',
     'Postgres',
     'MySQL',

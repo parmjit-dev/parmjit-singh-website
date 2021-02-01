@@ -111,7 +111,7 @@ h2 {
 		position: relative;
 		background: #123c69;
 		color: #494143;
-		height: 3000px;
+		height: 3200px;
 		align-items: center;
 	}
 	.card_container {
@@ -370,7 +370,8 @@ h2 {
 		position: relative;
 		background: #123c69;
 		color: #ac3b61;
-		min-height: 1400px;
+		min-height: 1600px;
+		height: 1800px;
 		align-items: center;
 		width: 100%;
 	}

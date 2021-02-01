@@ -6,7 +6,7 @@ import './project_card.style.scss';
 const Card = ({ link, image, title, desc, githubLink }) => {
   return (
     <div className="card">
-      <a href={link} target="_blank" rel="noopener noreferrer">
+      <a href={link === 'N/A' ? null : link} target="_blank" rel="noopener noreferrer">
         <img className="card-image" src={image} alt={`${title} project`} loading="lazy" />
         <h4 className="card-title">{title}</h4>
         <h5 className="card-desc">{desc}</h5>

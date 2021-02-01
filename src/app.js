@@ -19,6 +19,7 @@ import quizReactJPG from './static/quiz-maker-react.png';
 import myMuseJPG from './static/myMuseBackend.png';
 import gnkcJPG from './static/gnkcJPG.png';
 import wavePNG from './static/birds.png';
+import lvChatRoomPNG from './static/lv-chat_room.png';
 import './index.css';
 ReactGA.initialize('UA-181720692-1');
 
@@ -317,6 +318,13 @@ const App = () => {
               image={gnkcJPG}
               desc="This is a Web App built with a Django and PostgreSQL using AWS S3 for media storage. Also optimised for mobile and tablet view. Code not available due to privacy."
               githubLink="N/A"
+            />
+            <Card
+              link="N/A"
+              title="Laravel + Vue Chat Room"
+              image={lvChatRoomPNG}
+              desc="This is a Web App built with Laravel, Vue, MySQL and Laravel Websockets"
+              githubLink="https://github.com/Wolf-PSG/roboChat"
             />
           </div>{' '}
         </Element>
