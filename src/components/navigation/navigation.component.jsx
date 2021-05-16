@@ -10,7 +10,7 @@ import ReactTooltip from 'react-tooltip';
 const Navigation = () => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
   const [width, setWidth] = useState(0);
-  const [resumeText, setResumeTest] = useState('Resume');
+  const [resumeText, setResumeText] = useState('Resume');
   const openNav = () => {
     setWidth(200);
   };
