@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-scroll';
 import './navigation.style.scss';
-import resume from '../../static/Parmjit_Singh_Resume.pdf';
+import ReactTooltip from 'react-tooltip';
+// import resume from '../../static/Parmjit_Singh_Resume.pdf';
 
 const Navigation = () => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
@@ -54,8 +55,10 @@ const Navigation = () => {
         </div>
       ) : (
         <nav className="navbar">
-          <a href={resume} download="Parmjit_Singh_Resume.pdf">
-            <span className="buttonCode">Resume</span>
+        {/* download="Parmjit_Singh_Resume.pdf" */}
+          <a href='javascript:void(0)'>
+            <span className="buttonCode" data-tip="Currently employed as a software engineer">Resume</span>
+            <ReactTooltip />
           </a>
           <Link activeClass="active" className="navLinks" to="welcome" spy smooth duration={1000}>
             <span className="buttonCode header_btns">Profile</span>
