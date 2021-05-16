@@ -57,7 +57,7 @@ const Navigation = () => {
         <nav className="navbar">
         {/* download="Parmjit_Singh_Resume.pdf" */}
         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-          <a href='javascript:void(0)'>
+          <a>
             <span className="buttonCode" data-tip="Currently employed as a software engineer">Resume</span>
             <ReactTooltip />
           </a>
