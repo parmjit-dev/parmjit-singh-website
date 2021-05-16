@@ -10,6 +10,7 @@ import ReactTooltip from 'react-tooltip';
 const Navigation = () => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
   const [width, setWidth] = useState(0);
+  const [resumeText, setResumeTest] = useState('Resume');
   const openNav = () => {
     setWidth(200);
   };
@@ -27,7 +28,7 @@ const Navigation = () => {
             <span onClick={closeNav} className="closeButton">
               <FontAwesomeIcon icon={faArrowLeft} size="3x" />
             </span>
-            <span className="sidenav_btn">Resume</span>
+            <span className="sidenav_btn" onClick={resumeText === 'Resume' ? setResumeText('Currently Employed') : setResumeText('Resume')}>{resumeText}</span>
             <Link activeClass="active" className="navLinks" to="welcome" spy smooth duration={1000}>
               <span className="sidenav_btn">Profile</span>
             </Link>
