@@ -198,7 +198,7 @@ const App = () => {
                   <h1>Motivated</h1>
                   <h1>To Creating</h1>
                   <h1>Clean And</h1>
-                  <h1>Efficent Code.</h1>
+                  <h1>Efficient Code.</h1>
                 </div>
               ) : (
                 <div>
