@@ -27,11 +27,12 @@
   padding-bottom: 10px;
 }
 .skills {
-  word-break: break-all;
+  word-wrap: break-word;
 }
 
 .skill {
   padding: 5px;
+  word-wrap: break-word;
 }
 
 select::-ms-expand {

@@ -3,27 +3,28 @@ import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import './skills.style.scss';
 const skillOptions = {
-  languages: ['Python', 'PHP',   'Javascript', 'C#', 'C', 'Java - Android Studio', 'React Native'],
+  languages: ['Python', 'PHP', 'Javascript', 'TypeScript', 'Java: Android Studio', 'React Native'],
   frontend: [
-    'React - Context API + Hooks & Redux',
-    'Vue 3- Composition API + Vuex',
-    'Experience With Angular',
+    'React: Context API & Webhooks + Redux',
+    'Vue 3: Composition API & Vuex',
     'JQuery',
     'CSS/SCSS',
+    'Tailwind CSS'
   ],
   backend: [
     'Django',
-    'Node.JS - Express framework',
-    'GraphQL',
-    'Laravel - with Laravel Websockets',
+    'Node.JS: Express',
+    'GraphQL: Graphene & Apollo',
+    'Laravel: with Laravel Websockets',
+    'Yii2',
     'MongoDB',
-    'Postgres',
+    'PostgreSQL',
     'MySQL',
   ],
-  testing: ['Jest', 'Postman'],
+  testing: ['Jest', 'Codeception', 'Unittest',    'Postman'],
   systems: [
     'Docker',
-    'AWS - Lambda, S3, EC2',
+    'AWS CDK ',
     'Heroku',
     'Github',
     'Linux - 7+ years as primary OS',

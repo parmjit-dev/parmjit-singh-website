@@ -198,7 +198,7 @@ const App = () => {
                   <h1>Motivated</h1>
                   <h1>To Creating</h1>
                   <h1>Clean And</h1>
-                  <h1>Performant Code.</h1>
+                  <h1>Efficent Code.</h1>
                 </div>
               ) : (
                 <div>
@@ -259,12 +259,12 @@ const App = () => {
           </div>
           <div className="about_me_paragraph_container">
             <p className="about_me paragraph_p">
-              Greetings, I am a developer, who has a passion for <strong> web development</strong>,
+              Hey, I am software engineer, who has a passion for <strong> web development</strong>,
               learning and self improvement. <br /> <br />I enjoy reading, music and of course
               <strong> coding!</strong> as well as helping out in my community.
               <br /> <br />
               I have been volunteering at my local gurdwara as a guide and mentor for children and
-              young adults for the past 5 years.
+              young adults for the past 6 years.
               <br /> I also study two instruments (Harmonium and tabla) to a semi professional level
             </p>{' '}
           </div>
@@ -293,7 +293,7 @@ const App = () => {
               link="https://quiz-maker-psg.netlify.app/"
               title="quiz-maker Web App -- REST API"
               image={quizmakerJPG}
-              desc="This is a Web App built with the MERN (Mongodb, Express.js, React, Node.js) stack using AWS S3 for image storage. The Node API is hosted on heroku -- Site is currently being reworked -- still usable"
+              desc="This is a Web App built with the MERN (Mongodb, Express.js, React, Node.js) stack using AWS S3 for image storage. The Node API is hosted on heroku"
               githubLink="https://github.com/Wolf-PSG/quizPortfolio"
               onClick={() => ReactGA.event('PROJECT', 'QUIZ PROJECT CLICKED', 'QUIZ_PAGE')}
             />{' '}
@@ -301,7 +301,7 @@ const App = () => {
               link="https://quiz-maker-psg.netlify.app/"
               title="quiz-maker Web App -- React"
               image={quizReactJPG}
-              desc="Quiz app frontend. built with React.js. Site is currently being reworked-- still usable"
+              desc="Quiz app frontend. built with React.js. Site is currently being reworked"
               githubLink="https://github.com/Wolf-PSG/quizPortfolioWebApp"
               onClick={() => ReactGA.event('PROJECT', 'QUIZ PROJECT CLICKED', 'QUIZ_PAGE')}
             />{' '}

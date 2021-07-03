@@ -5,7 +5,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { useAlert } from 'react-alert';
 
@@ -25,10 +25,10 @@ const Social = () => {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://twitter.com/_Parmjit_"
-        className="twitter social"
+        href="https://www.instagram.com/_parmjit_/"
+        className="instagram social"
       >
-        <FontAwesomeIcon icon={faTwitter} size="3x" />
+        <FontAwesomeIcon icon={faInstagram} size="3x" />
       </a>
       <a
         target="_blank"
