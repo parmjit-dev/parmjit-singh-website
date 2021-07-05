@@ -25,14 +25,6 @@ const Social = () => {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://www.instagram.com/_parmjit_/"
-        className="instagram social"
-      >
-        <FontAwesomeIcon icon={faInstagram} size="3x" />
-      </a>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
         href="https://www.linkedin.com/in/parmjit-gill-b139721b8/"
         className="linkedin social"
       >
