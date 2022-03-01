@@ -1,5 +1,5 @@
-Portfolio site for Parmjit Singh Gill.
+# Portfolio site for Parmjit Singh Gill
 
 Testing for different js libraries.
 
-working on parallax
+working on loading screen and three.js demo

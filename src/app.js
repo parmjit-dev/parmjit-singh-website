@@ -2,7 +2,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable prefer-rest-params */
 /* eslint-disable react/jsx-filename-extension */
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, Suspense} from 'react';
 import Typewriter from 'typewriter-effect';
 import ReactGA from 'react-ga';
 import { useSpring, animated } from 'react-spring';
@@ -65,6 +65,7 @@ const App = () => {
   });
 
   return (
+    <Suspense>
     <div className="page" ref={ref}>
       <Meta />
       <div className="landing">
@@ -335,6 +336,7 @@ const App = () => {
         </Element>
       </div>
     </div>
+    </Suspense>
   );
 };
 export default App;
