@@ -102,7 +102,7 @@ h2 {
 		box-shadow: 10px 20px #888888;
 		color: #123c69;
 		max-width: 80vh;
-		min-height: 400px;
+		height: 500px;
 		text-align: center;
 		align-items: center;
 	}
@@ -303,7 +303,7 @@ h2 {
 	.about_me_paragraph {
 		justify-content: center;
 		word-wrap: break-word;
-		font-size: 30px;
+		font-size: 28px;
 		width: auto;
 		left: 20%;
 		position: relative;
@@ -355,8 +355,8 @@ h2 {
 		border-radius: 10px;
 		box-shadow: 10px 20px #888888;
 		color: #123c69;
-		min-width: 800px;
-		min-height: 400px;
+		width: 1000px;
+		height: 500px;
 		text-align: center;
 		align-items: center;
 	}
@@ -565,7 +565,7 @@ h2 {
 .about_me_paragraph {
 	justify-content: center;
 	word-wrap: break-word;
-	font-size: 30px;
+	font-size: 28px;
 	width: auto;
 	overflow: hidden;
 	left: 5%;
@@ -617,7 +617,7 @@ h2 {
 	box-shadow: 10px 20px #888888;
 	color: #123c69;
 	/* max-width: 550px; */
-	min-height: 400px;
+	height: 500px;
 	text-align: center;
 	align-items: center;
 }

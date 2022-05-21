@@ -2,14 +2,15 @@
 import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import './skills.style.scss';
-const skillOptions = {
+
+const skillOptions: Record<string, any> = {
   languages: ['Python', 'PHP', 'Javascript', 'TypeScript', 'Java: Android Studio', 'React Native'],
   frontend: [
     'React: Context API & Webhooks + Redux',
     'Vue 3: Composition API & Vuex',
     'JQuery',
     'CSS/SCSS',
-    'Tailwind CSS'
+    'Tailwind CSS',
   ],
   backend: [
     'Django',
@@ -21,21 +22,16 @@ const skillOptions = {
     'PostgreSQL',
     'MySQL',
   ],
-  testing: ['Jest', 'Codeception', 'Unittest',    'Postman'],
-  systems: [
-    'Docker',
-    'AWS CDK ',
-    'Heroku',
-    'Github',
-    'Linux - 7+ years as primary OS',
-  ],
+  testing: ['Jest', 'Codeception', 'Unittest', 'Postman'],
+  systems: ['Docker', 'AWS CDK ', 'Heroku', 'Github', 'Linux - 7+ years as primary OS'],
 };
+
 const Skills = () => {
   const [skill, setSkill] = useState('languages');
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setSkill(e.target.id);
   };
-  const handleSelect = (e) => {
+  const handleSelect = (e: any) => {
     setSkill(e.target.value);
   };
 
@@ -79,18 +75,15 @@ const Skills = () => {
           </span>
         </div>
       )}
-      {skill !== '' ? (
-        <div>
-          {skillOptions[skill].map((value, index) => (
-            <h3 className="skill" key={`${value}:${index + 1}`}>
-              {' '}
-              {value}{' '}
-            </h3>
-          ))}
-        </div>
-      ) : (
-        <div />
-      )}
+      <div>
+        {skillOptions[skill].map((value: string, index: number) => (
+          <h3 className="skill" key={`${value}:${index + 1}`}>
+            {' '}
+            {value}{' '}
+          </h3>
+        ))}
+      </div>
+      <div />
     </div>
   );
 };
