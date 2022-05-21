@@ -1,3 +1,7 @@
+.no_code_icon {
+  position: fixed;
+}
+
 @media only screen and (max-width: 786px) {
   .card {
     float: left;
@@ -19,6 +23,7 @@
     min-width: 100%;
     height: 60%;
     transition: 0.2s ease;
+    padding-bottom: 10px;
 
     &:hover {
       -webkit-transform: scale(1.05);
@@ -62,6 +67,8 @@
     max-height: 600px;
     min-height: 320px;
     transition: 0.2s ease;
+    padding-bottom: 10px;
+
 
     &:hover {
       -webkit-transform: scale(1.05);
@@ -104,6 +111,7 @@
     max-height: 400px;
     min-height: 200px;
     transition: 0.2s ease;
+    padding-bottom: 10px;
 
     &:hover {
       -webkit-transform: scale(1.05);
@@ -118,6 +126,7 @@
       transition: all 0.4s ease 0s;
     }
   }
+
   a {
     color: #edc7b7;
     text-decoration: none;

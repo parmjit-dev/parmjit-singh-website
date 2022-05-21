@@ -1,6 +1,4 @@
 /* eslint-disable react/button-has-type */
-// App.js
-import React from 'react';
 import { useAlert } from 'react-alert';
 
 const App = () => {

@@ -28,7 +28,18 @@ const calcLeft = (o) => `translateX(${o * -0.2}px)`;
 
 const App = () => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const largerTabletsScreen = useMediaQuery({ maxDeviceWidth: 1440 })
+  const tenEightScreens = useMediaQuery({maxDeviceWidth: 1080})
   const isBigScreen = useMediaQuery({ minDeviceWidth: 2560 });
+
+  const moving_paragraph_distance = {
+    first: isBigScreen ? 0.10 : tenEightScreens ? 0.001 :  largerTabletsScreen ? 0.01 : 0.10,
+    second: isBigScreen ? 0.20 : tenEightScreens ? 0.002 : largerTabletsScreen ? 0.04 : 0.15,
+    third: isBigScreen ? 0.30 : tenEightScreens ? 0.003 : largerTabletsScreen ? 0.08 : 0.20,
+    forth: isBigScreen ? 0.40 : tenEightScreens ? 0.004 : largerTabletsScreen ? 0.12 : 0.25,
+    fifth: isBigScreen ? 0.50 : tenEightScreens ? 0.005 : largerTabletsScreen ? 0.14 : 0.30,
+    sixth: isBigScreen ? 0.60 : tenEightScreens ? 0.006 : largerTabletsScreen ? 0.18 : 0.35,
+  }
 
   const ref = useRef();
   const [{ offset }, set] = useSpring(() => ({ offset: 0 }));
@@ -201,11 +212,11 @@ const App = () => {
                   <h1>Efficient Code.</h1>
                 </div>
               ) : (
-                <div>
+                <div className='moving_about_me_paragraph'>
                   <animated.h1
                     className="about_1"
                     style={{
-                      transform: offset.interpolate((x) => `translateX(${x * 0.01}px)`),
+                      transform: offset.interpolate((x) => `translateX(${x * moving_paragraph_distance.first}px)`),
                     }}
                   >
                     Hard Working
@@ -213,7 +224,7 @@ const App = () => {
                   <animated.h1
                     className="about_2"
                     style={{
-                      transform: offset.interpolate((x) => `translateX(${x * 0.03}px)`),
+                      transform: offset.interpolate((x) => `translateX(${x * moving_paragraph_distance.second}px)`),
                     }}
                   >
                     {' '}
@@ -222,7 +233,7 @@ const App = () => {
                   <animated.h1
                     className="about_3"
                     style={{
-                      transform: offset.interpolate((x) => `translateX(${x * 0.05}px)`),
+                      transform: offset.interpolate((x) => `translateX(${x * moving_paragraph_distance.third}px)`),
                     }}
                   >
                     I Am Motivated
@@ -230,7 +241,7 @@ const App = () => {
                   <animated.h1
                     className="about_4"
                     style={{
-                      transform: offset.interpolate((x) => `translateX(${x * 0.07}px)`),
+                      transform: offset.interpolate((x) => `translateX(${x * moving_paragraph_distance.forth}px)`),
                     }}
                   >
                     to Creating
@@ -238,7 +249,7 @@ const App = () => {
                   <animated.h1
                     className="about_5"
                     style={{
-                      transform: offset.interpolate((x) => `translateX(${x * 0.09}px)`),
+                      transform: offset.interpolate((x) => `translateX(${x * moving_paragraph_distance.fifth}px)`),
                     }}
                   >
                     {' '}
@@ -247,7 +258,7 @@ const App = () => {
                   <animated.h1
                     className="about_6"
                     style={{
-                      transform: offset.interpolate((x) => `translateX(${x * 0.11}px)`),
+                      transform: offset.interpolate((x) => `translateX(${x * moving_paragraph_distance.sixth}px)`),
                     }}
                   >
                     {' '}
