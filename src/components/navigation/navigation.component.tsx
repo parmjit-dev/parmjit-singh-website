@@ -7,7 +7,7 @@ import './navigation.style.scss';
 import ReactTooltip from 'react-tooltip';
 // import resume from '../../static/Parmjit_Singh_Resume.pdf';
 
-const Navigation = () => {
+export default function Navigation() {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
   const [width, setWidth] = useState(0);
   const [resumeText, setResumeText] = useState('Resume');
@@ -20,11 +20,11 @@ const Navigation = () => {
 
   const changeResume = () => {
     if (resumeText === 'Resume') {
-        setResumeText('Currently Employed')
+      setResumeText('Currently Employed');
     } else {
-        setResumeText('Resume')
+      setResumeText('Resume');
     }
-  }
+  };
   return (
     <div className="navigation">
       {isTabletOrMobile ? (
@@ -36,7 +36,9 @@ const Navigation = () => {
             <span onClick={closeNav} className="closeButton">
               <FontAwesomeIcon icon={faArrowLeft} size="3x" />
             </span>
-            <span className="sidenav_btn" onClick={changeResume}>{resumeText}</span>
+            <span className="sidenav_btn" onClick={changeResume}>
+              {resumeText}
+            </span>
             <Link activeClass="active" className="navLinks" to="welcome" spy smooth duration={1000}>
               <span className="sidenav_btn">Profile</span>
             </Link>
@@ -64,10 +66,12 @@ const Navigation = () => {
         </div>
       ) : (
         <nav className="navbar">
-        {/* download="Parmjit_Singh_Resume.pdf" */}
-        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          {/* download="Parmjit_Singh_Resume.pdf" */}
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <a>
-            <span className="buttonCode" data-tip="Currently employed as a software engineer">Resume</span>
+            <span className="buttonCode" data-tip="Currently employed as a software engineer">
+              Resume
+            </span>
             <ReactTooltip />
           </a>
           <Link activeClass="active" className="navLinks" to="welcome" spy smooth duration={1000}>
@@ -83,6 +87,4 @@ const Navigation = () => {
       )}
     </div>
   );
-};
-
-export default Navigation;
+}
