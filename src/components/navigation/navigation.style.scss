@@ -43,6 +43,8 @@
   box-shadow:1px 1px 2px #333;
   cursor: default;
   outline: none;
+  -webkit-tap-highlight-color: transparent;
+
 }
 @-webkit-keyframes action {
   0% { transform: translateY(0); }
