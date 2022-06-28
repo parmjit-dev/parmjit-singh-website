@@ -39,7 +39,7 @@ const Social = () => {
       >
         <FontAwesomeIcon icon={faEnvelope} size="3x" />
       </a>
-      <a target="_blank" rel="noopener noreferrer" href="/playlist" className="play social">
+      <a rel="noopener noreferrer" href="/playlist" className="play social">
         <FontAwesomeIcon icon={faHeart} size="3x" />
       </a>
     </div>
