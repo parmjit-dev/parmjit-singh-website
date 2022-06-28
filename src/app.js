@@ -28,18 +28,18 @@ const calcLeft = (o) => `translateX(${o * -0.2}px)`;
 
 const App = () => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' });
-  const largerTabletsScreen = useMediaQuery({ maxDeviceWidth: 1440 })
-  const tenEightScreens = useMediaQuery({maxDeviceWidth: 1080})
+  const largerTabletsScreen = useMediaQuery({ maxDeviceWidth: 1440 });
+  const tenEightScreens = useMediaQuery({ maxDeviceWidth: 1080 });
   const isBigScreen = useMediaQuery({ minDeviceWidth: 2560 });
 
   const moving_paragraph_distance = {
-    first: isBigScreen ? 0.10 : tenEightScreens ? 0.001 :  largerTabletsScreen ? 0.01 : 0.10,
-    second: isBigScreen ? 0.20 : tenEightScreens ? 0.002 : largerTabletsScreen ? 0.04 : 0.15,
-    third: isBigScreen ? 0.30 : tenEightScreens ? 0.003 : largerTabletsScreen ? 0.08 : 0.20,
-    forth: isBigScreen ? 0.40 : tenEightScreens ? 0.004 : largerTabletsScreen ? 0.12 : 0.25,
-    fifth: isBigScreen ? 0.50 : tenEightScreens ? 0.005 : largerTabletsScreen ? 0.14 : 0.30,
-    sixth: isBigScreen ? 0.60 : tenEightScreens ? 0.006 : largerTabletsScreen ? 0.18 : 0.35,
-  }
+    first: isBigScreen ? 0.1 : tenEightScreens ? 0.001 : largerTabletsScreen ? 0.01 : 0.1,
+    second: isBigScreen ? 0.2 : tenEightScreens ? 0.002 : largerTabletsScreen ? 0.04 : 0.15,
+    third: isBigScreen ? 0.3 : tenEightScreens ? 0.003 : largerTabletsScreen ? 0.08 : 0.2,
+    forth: isBigScreen ? 0.4 : tenEightScreens ? 0.004 : largerTabletsScreen ? 0.12 : 0.25,
+    fifth: isBigScreen ? 0.5 : tenEightScreens ? 0.005 : largerTabletsScreen ? 0.14 : 0.3,
+    sixth: isBigScreen ? 0.6 : tenEightScreens ? 0.006 : largerTabletsScreen ? 0.18 : 0.35,
+  };
 
   const ref = useRef();
   const [{ offset }, set] = useSpring(() => ({ offset: 0 }));
@@ -85,16 +85,26 @@ const App = () => {
           {isTabletOrMobile ? (
             <div className="type-container">
               <Typewriter
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString(
+                      "<span style='font-size:45px;line-height:1.8;'> Parmjit Singh  </span>"
+                    )
+                    .pauseFor(1000)
+                    .typeString(
+                      '<span style="font-size:45px;line-height:1.8;"> Software Engineer </span>'
+                    )
+                    .pauseFor(1000)
+                    .typeString(
+                      '<span style="font-size:45px;line-height:1.8;"> Welcome To My Site</span>'
+                    )
+                    .pauseFor(2500)
+                    .start();
+                }}
                 options={{
-                  strings: [
-                    '<span style="font-size:50px;"> Parmjit Singh </span>',
-                    '<span style="font-size:50px;">Full-Stack Developer</span>',
-                    '<span style="font-size:50px;"> Welcome to my site.</span>',
-                  ],
                   autoStart: true,
                   stop: true,
-                  loop: true,
-                  pausefor: 2500,
+                  // loop: true,
                   cursor: '<span style="font-size:60px;">|</span>',
                 }}
               />
@@ -122,7 +132,7 @@ const App = () => {
               >
                 <Typewriter
                   options={{
-                    strings: ['<span style="font-size:80px;"> Full Stack Developer</span>'],
+                    strings: ['<span style="font-size:80px;"> Software Engineer </span>'],
                     autoStart: true,
                     stop: true,
                     loop: true,
@@ -159,7 +169,7 @@ const App = () => {
                     autoStart: true,
                     stop: true,
                     loop: true,
-                    pausefor: 2500,
+                    pausefor: 3500,
                     cursor: '<span style="font-size:60px;">|</span>',
                   }}
                 />{' '}
@@ -170,7 +180,7 @@ const App = () => {
               >
                 <Typewriter
                   options={{
-                    strings: ['<span style="font-size:60px;"> Full Stack Developer</span>'],
+                    strings: ['<span style="font-size:60px;"> Software Engineer </span>'],
                     autoStart: true,
                     stop: true,
                     loop: true,
@@ -203,7 +213,7 @@ const App = () => {
           <div className="heading_container">
             <div className="about_me_paragraph">
               {isTabletOrMobile ? (
-                <div>
+                <div className="static_about_me_paragraph">
                   <h1>Hard Working</h1>
                   <h1>And Driven.</h1>
                   <h1>Motivated</h1>
@@ -212,11 +222,13 @@ const App = () => {
                   <h1>Efficient Code.</h1>
                 </div>
               ) : (
-                <div className='moving_about_me_paragraph'>
+                <div className="moving_about_me_paragraph">
                   <animated.h1
                     className="about_1"
                     style={{
-                      transform: offset.interpolate((x) => `translateX(${x * moving_paragraph_distance.first}px)`),
+                      transform: offset.interpolate(
+                        (x) => `translateX(${x * moving_paragraph_distance.first}px)`
+                      ),
                     }}
                   >
                     Hard Working
@@ -224,7 +236,9 @@ const App = () => {
                   <animated.h1
                     className="about_2"
                     style={{
-                      transform: offset.interpolate((x) => `translateX(${x * moving_paragraph_distance.second}px)`),
+                      transform: offset.interpolate(
+                        (x) => `translateX(${x * moving_paragraph_distance.second}px)`
+                      ),
                     }}
                   >
                     {' '}
@@ -233,7 +247,9 @@ const App = () => {
                   <animated.h1
                     className="about_3"
                     style={{
-                      transform: offset.interpolate((x) => `translateX(${x * moving_paragraph_distance.third}px)`),
+                      transform: offset.interpolate(
+                        (x) => `translateX(${x * moving_paragraph_distance.third}px)`
+                      ),
                     }}
                   >
                     I Am Motivated
@@ -241,7 +257,9 @@ const App = () => {
                   <animated.h1
                     className="about_4"
                     style={{
-                      transform: offset.interpolate((x) => `translateX(${x * moving_paragraph_distance.forth}px)`),
+                      transform: offset.interpolate(
+                        (x) => `translateX(${x * moving_paragraph_distance.forth}px)`
+                      ),
                     }}
                   >
                     to Creating
@@ -249,7 +267,9 @@ const App = () => {
                   <animated.h1
                     className="about_5"
                     style={{
-                      transform: offset.interpolate((x) => `translateX(${x * moving_paragraph_distance.fifth}px)`),
+                      transform: offset.interpolate(
+                        (x) => `translateX(${x * moving_paragraph_distance.fifth}px)`
+                      ),
                     }}
                   >
                     {' '}
@@ -258,7 +278,9 @@ const App = () => {
                   <animated.h1
                     className="about_6"
                     style={{
-                      transform: offset.interpolate((x) => `translateX(${x * moving_paragraph_distance.sixth}px)`),
+                      transform: offset.interpolate(
+                        (x) => `translateX(${x * moving_paragraph_distance.sixth}px)`
+                      ),
                     }}
                   >
                     {' '}
@@ -270,7 +292,7 @@ const App = () => {
           </div>
           <div className="about_me_paragraph_container">
             <p className="about_me paragraph_p">
-              Hey, I am software engineer, who has a passion for <strong> web development</strong>,
+              Hey, I'm software engineer who has a passion for <strong> web development</strong>,
               learning and self improvement. <br /> <br />I enjoy reading, music and of course
               <strong> coding!</strong> as well as helping out in my community.
               <br /> <br />
@@ -290,7 +312,7 @@ const App = () => {
       <div className="project_container">
         <Element name="projects">
           <h2 className="project-greetings"> Projects - Made From Scratch </h2> <br />
-          <h5 className="project-hint"> Click the cards to open the app</h5>
+          <h3 className="project-hint"> Click the cards to open the app</h3>
           <div className="card_container">
             <Card
               link="https://mythosapi.herokuapp.com/"

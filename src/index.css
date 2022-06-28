@@ -49,27 +49,33 @@ h2 {
 		position: absolute;
 		bottom: 0px;
 		right: 0px;
+		pointer-events: none;
 	}
 
 	.type-container {
 		color: #123c69;
 		position: absolute;
-		top: 10%;
-		left: 0;
+		left: -10%;
 		padding-top: 50px;
 		word-wrap: break-word;
 		overflow: hidden;
 	}
 	.about_me_paragraph {
-		justify-content: center;
-		font-size: 15px;
 		left: 0;
-		overflow: hidden;
+		padding: 15px;
+		text-align: center;
 	}
+
+	.static_about_me_paragraph {
+		margin: 25px;
+	}
+
 	.about_me_paragraph_container {
 		text-align: center;
 		font-size: 20px;
 		word-wrap: break-word;
+		margin: 15px;
+
 	}
 	.heading_container {
 		min-height: 700px;
@@ -95,17 +101,6 @@ h2 {
 		padding-left: 0px;
 	}
 
-	.skill_container {
-		padding: 50px;
-		background-color: #eee2dc;
-		border-radius: 10px;
-		box-shadow: 10px 20px #888888;
-		color: #123c69;
-		max-width: 80vh;
-		height: 500px;
-		text-align: center;
-		align-items: center;
-	}
 	.project_container {
 		justify-content: center;
 		position: relative;
@@ -167,7 +162,7 @@ h2 {
 /***************************************************************************************/
 /****************************************4K**********************************************/
 
-@media only screen and (min-width: 2560px) {
+@media only screen and (min-width: 2540px) {
 	*::-webkit-scrollbar {
 		display: none;
 	}
@@ -305,7 +300,7 @@ h2 {
 		word-wrap: break-word;
 		font-size: 28px;
 		width: auto;
-		left: 20%;
+		left: 5%;
 		position: relative;
 		overflow: hidden;
 	}
@@ -523,8 +518,9 @@ h2 {
 .type-container {
 	color: #123c69;
 	position: absolute;
-	top: 10%;
-	left: 20%;
+	pointer-events: none;
+	/* top: %; */
+	left: 7%;
 	/* padding: 100px; */
 	overflow: hidden;
 	/* max-width: 100%; */
@@ -568,12 +564,12 @@ h2 {
 	font-size: 28px;
 	width: auto;
 	overflow: hidden;
-	left: 5%;
 	position: relative;
 }
 .about_me_paragraph_container {
 	text-align: center;
 	font-size: 30px;
+	margin: 15px;
 }
 .heading_container {
 	min-height: 700px;
@@ -584,19 +580,19 @@ h2 {
 	padding-left: 20px;
 }
 .about_2 {
-	padding-left: 170px;
+	padding-left: 150px;
 }
 .about_3 {
-	padding-left: 230px;
+	padding-left: 220px;
 }
 .about_4 {
-	padding-left: 400px;
+	padding-left: 330px;
 }
 .about_5 {
-	padding-left: 500px;
+	padding-left: 430px;
 }
 .about_6 {
-	padding-left: 540px;
+	padding-left: 510px;
 }
 
 .qualifications {
@@ -614,10 +610,12 @@ h2 {
 	padding: 50px;
 	background-color: #eee2dc;
 	border-radius: 10px;
-	box-shadow: 10px 20px #888888;
+	/* box-shadow: 10px 20px #888888; */
+	box-shadow:1px 1px 2px #333;
+    width: 50vw;
 	color: #123c69;
 	/* max-width: 550px; */
-	height: 500px;
+	height: 510px;
 	text-align: center;
 	align-items: center;
 }

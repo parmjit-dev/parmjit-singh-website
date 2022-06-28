@@ -10,7 +10,14 @@
   transition: 0.5s;
 
   .closeButton {
-      padding: 25px;
+    // padding-top: 50px;
+    // padding-right: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .sidenav_btn{
@@ -25,10 +32,22 @@
 }
 
 .icon {
-  background: #123c69;;
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 10;
-  padding: 30px;
+  background: #123c69;
+  position:absolute;
+  top:60%;
+  left:40%;
+  border-radius: 50px;
+  padding: 20px;
+  -webkit-animation: action 1s infinite  alternate;
+  animation: action 1s infinite  alternate;
+  box-shadow:1px 1px 2px #333;
+}
+@-webkit-keyframes action {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+@keyframes action {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
 }

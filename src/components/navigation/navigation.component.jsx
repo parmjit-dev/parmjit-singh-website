@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-scroll';
 import './navigation.style.scss';
 import ReactTooltip from 'react-tooltip';
@@ -9,15 +9,8 @@ import ReactTooltip from 'react-tooltip';
 
 const Navigation = () => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
-  const [width, setWidth] = useState(0);
   const [resumeText, setResumeText] = useState('Resume');
-  const openNav = () => {
-    setWidth(200);
-  };
-  const closeNav = () => {
-    setWidth(0);
-  };
-
+  // eslint-disable-next-line no-unused-vars
   const changeResume = () => {
     if (resumeText === 'Resume') {
         setResumeText('Currently Employed')
@@ -29,37 +22,18 @@ const Navigation = () => {
     <div className="navigation">
       {isTabletOrMobile ? (
         <div className="mobileNav">
-          <div className="icon" id="icon" onClick={openNav}>
-            <FontAwesomeIcon icon={faBars} size="lg" onClick={openNav} />
-          </div>
-          <div className="sidenav" id="sidenav" style={{ width: width }}>
-            <span onClick={closeNav} className="closeButton">
-              <FontAwesomeIcon icon={faArrowLeft} size="3x" />
-            </span>
-            <span className="sidenav_btn" onClick={changeResume}>{resumeText}</span>
-            <Link activeClass="active" className="navLinks" to="welcome" spy smooth duration={1000}>
-              <span className="sidenav_btn">Profile</span>
-            </Link>
-            <Link
+          <div className="icon" id="icon" >
+          <Link
               activeClass="active"
               className="navLinks"
-              to="projects"
+              to="welcome"
               spy
               smooth
               duration={1000}
             >
-              <span className="sidenav_btn">Projects</span>
+            <FontAwesomeIcon icon={faChevronDown} size="lg" />
             </Link>
-            <Link
-              activeClass="active"
-              className="navLinks"
-              to="contacts"
-              spy
-              smooth
-              duration={3000}
-            >
-              <span className="sidenav_btn">Contact</span>
-            </Link>
+
           </div>
         </div>
       ) : (
