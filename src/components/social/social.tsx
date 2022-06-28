@@ -6,7 +6,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faEnvelope, faHeart } from '@fortawesome/free-regular-svg-icons';
 import { useAlert } from 'react-alert';
 
 const Social = () => {
@@ -38,6 +38,9 @@ const Social = () => {
         }}
       >
         <FontAwesomeIcon icon={faEnvelope} size="3x" />
+      </a>
+      <a target="_blank" rel="noopener noreferrer" href="/playlist" className="play social">
+        <FontAwesomeIcon icon={faHeart} size="3x" />
       </a>
     </div>
   );
