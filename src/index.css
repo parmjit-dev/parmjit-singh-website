@@ -476,6 +476,8 @@ a.homepage:hover {
     font-size: 30px;
     transition: transform 250ms;
     display: inline-block;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
     /* padding: 25px; */
   }
 

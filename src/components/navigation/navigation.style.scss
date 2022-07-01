@@ -35,12 +35,13 @@
   background: #123c69;
   position:absolute;
   top:60%;
-  left:45%;
+  left:43%;
   border-radius: 50px;
   padding: 20px;
   -webkit-animation: action 1s infinite  alternate;
   animation: action 1s infinite  alternate;
   box-shadow:1px 1px 2px #333;
+  transform: translate(-50%, -50%);
   cursor: default;
   outline: none;
   -webkit-tap-highlight-color: transparent;
