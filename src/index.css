@@ -76,7 +76,6 @@ a.homepage:hover {
 }
 
 .spotify_iframe {
-  color-scheme: dark !important;
   font-family: 'spotify-circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 2rem;
   -webkit-font-smoothing: antialiased;
@@ -85,6 +84,37 @@ a.homepage:hover {
   transition: transform 400ms;
   /* position: relative; */
 }
+
+#gr_updates_widget{
+  font-family: 'spotify-circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border-radius: 5px;
+  background-color:#fff;
+  -webkit-box-shadow: 0px 0px 4px 1px #595959,
+  inset 0px 0px 0px 1px #7D730B;
+  -moz-box-shadow: 0px 0px 4px 1px #595959,
+  inset 0px 0px 0px 1px #7D730B;
+  box-shadow: 0px 0px 4px 1px #595959,
+  inset 0px 0px 0px 1px #7D730B;
+  padding:20px 10px 35px 15px;
+  width:250px;
+  height:330px;
+  }
+  #gr_footer{
+  margin-bottom:10px;
+  }
+  #gr_updates_widget p{
+  padding:0px;
+  margin:0;
+  font-size:14px;
+  }
+  #gr_footer img{
+  margin-top: 1 0px;
+  width:100px;
+  float:left;
+  }
+  #gr_updates_widget img{
+    border-style:none;
+  }
 
 /**********************************************MOBILE******************************************/
 @media only screen and (max-width: 786px) {

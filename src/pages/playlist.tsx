@@ -21,7 +21,7 @@ const Playlist = () => {
             className="spotify_iframe"
             src="https://open.spotify.com/embed/show/2brQuhZwYWRJZtrj6fxeUH?utm_source=generator"
             width="100%"
-            height="232"
+            height="400"
             frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           ></iframe>
@@ -31,11 +31,18 @@ const Playlist = () => {
             className="spotify_iframe"
             src="https://open.spotify.com/embed/playlist/5pF2e0aXH4QNe2V7AgMXDU?utm_source=generator"
             width="100%"
-            height="232"
+            height="400"
             frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           ></iframe>
         </div>
+	<div className="spotify_column" id="gr_updates_widget">
+	  <iframe  id="the_iframe" src="https://goodreads.com/widgets/user_update_widget?height=370&num_updates=4&user=143207530&width=250" width="248" height="300"></iframe>
+          <div id="gr_footer">
+            <a href="https://www.goodreads.com/"><img alt="Goodreads: Book reviews, recommendations, and discussion" src="https://s.gr-assets.com/images/layout/goodreads_logo_140.png" /></a>
+          </div>
+        </div>
+
       </div>
     </div>
   );
