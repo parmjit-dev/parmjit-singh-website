@@ -4,7 +4,7 @@ import { useMediaQuery } from 'react-responsive';
 import './skills.style.scss';
 
 const skillOptions: Record<string, any> = {
-  languages: ['Python', 'PHP', 'Javascript', 'TypeScript', 'Java: Android Studio', 'React Native'],
+  languages: ['Python', 'PHP', 'Javascript', 'TypeScript', 'Golang','Java', 'Scala', 'React Native'],
   frontend: [
     'React: Context API & Webhooks + Redux',
     'Vue 3: Composition API & Vuex',
@@ -14,16 +14,23 @@ const skillOptions: Record<string, any> = {
   ],
   backend: [
     'Django',
-    'Node.JS: Express',
+    'Node.js: Express, Next.js',
     'GraphQL: Graphene & Apollo',
+    'Hugo',
+    'Play',
     'Laravel: with Laravel Websockets',
     'Yii2',
+  ],
+  databases: [
     'MongoDB',
     'PostgreSQL',
     'MySQL',
+    'DynamoDB',
+    'Redis',
+    'Apache Kafka'
   ],
-  testing: ['Jest', 'Codeception', 'Unittest', 'Postman'],
-  systems: ['Docker', 'AWS CDK ', 'Heroku', 'Github', 'Linux - 7+ years as primary OS'],
+  testing: ['Jest', 'Codeception', 'Unittest', 'Postman', 'Opentelemetry', 'Jaeger'],
+  systems: ['Docker', 'AWS CDK ', 'K8s','Heroku', 'Github', 'Linux - 7+ years as primary OS'],
 };
 
 const Skills = () => {
@@ -49,6 +56,9 @@ const Skills = () => {
           <option value="backend" id="backend" onChange={handleChange}>
             Backend
           </option>
+          <option value="databases" id="databases" onChange={handleChange}>
+            Databases
+          </option>
           <option value="testing" id="testing" onChange={handleChange}>
             Testing
           </option>
@@ -66,6 +76,9 @@ const Skills = () => {
           </span>
           <span className="btn" id="backend" onClick={handleChange}>
             Backend
+          </span>
+          <span className="btn" id="databases" onClick={handleChange}>
+            Databases
           </span>
           <span className="btn" id="testing" onClick={handleChange}>
             Testing

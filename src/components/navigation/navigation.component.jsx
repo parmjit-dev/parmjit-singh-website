@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-scroll';
 import './navigation.style.scss';
 import ReactTooltip from 'react-tooltip';

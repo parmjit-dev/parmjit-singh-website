@@ -24,7 +24,8 @@ const calcLeft = (o) => `translateX(${o * -0.2}px)`;
 
 const card_data = [
   {
-    link: 'https://mythosapi.herokuapp.com/',
+    // link: 'https://mythosapi.herokuapp.com/',
+    link: 'N/A',
     title: 'Mythos API',
     image: mythosJPG,
     desc: 'This is an API built with Django-Rest-Framework, Postgres and uses AWS S3 for file storage',
@@ -34,35 +35,36 @@ const card_data = [
     link: 'https://quiz-maker-psg.netlify.app/',
     title: 'quiz-maker Web App -- REST API',
     image: quizmakerJPG,
-    desc: 'This is a Web App built with the MERN (Mongodb, Express.js, React, Node.js) stack using AWS S3 for image storage. The Node API is hosted on heroku',
+    desc: 'This is a Web App built with the MERN (Mongodb, Express.js, React, Node.js) stack using AWS S3 for image storage. The Node API is hosted on heroku. Not currently maintained',
     githubLink: 'https://github.com/Wolf-PSG/quizPortfolio',
   },
   {
     link: 'https://quiz-maker-psg.netlify.app/',
     title: 'quiz-maker Web App -- React',
     image: quizReactJPG,
-    desc: 'Quiz app frontend. built with React.js. Site is currently being reworked',
+    desc: 'Quiz app frontend. built with React.js. Not currently maintained',
     githubLink: 'https://github.com/Wolf-PSG/quizPortfolioWebApp',
   },
   {
-    link: 'https://github.com/Wolf-PSG/myMuse',
+    link: 'N/A',
     title: 'myMuse - real-time chat App',
     image: myMuseJPG,
-    desc: 'This is a Web App built with a Nodejs and Graphql backend using Subscriptions and Websockets to handle realtime chat. Frontend is built with React and is currently under development',
+    desc: 'This is a Web App built with a Nodejs and Graphql backend using Subscriptions and Websockets to handle realtime chat. Frontend is built with React and is currently under development. Not currently maintained',
     githubLink: 'https://github.com/Wolf-PSG/myMuse',
   },
   {
-    link: 'https://gnkc-test.herokuapp.com/',
+    link: 'N/A',
+    // link: 'https://gnkc-test.herokuapp.com/',
     title: 'Client Project - Website and Homework/Quiz CMS',
     image: gnkcJPG,
-    desc: 'This is a Web App built with a Django and PostgreSQL using AWS S3 for media storage. Also optimised for mobile and tablet view. Code not available due to privacy.',
+    desc: 'This is a Web App built with a Django and PostgreSQL using AWS S3 for media storage. Also optimised for mobile and tablet view. Code not available for viewing.',
     githubLink: 'N/A',
   },
   {
     link: 'N/A',
     title: 'Laravel + Vue Chat Room',
     image: lvChatRoomPNG,
-    desc: 'This is a Web App built with Laravel, Vue, MySQL and Laravel Websockets',
+    desc: 'This is a Web App built with Laravel, Vue, MySQL and Laravel Websockets. Not currently maintained.',
     githubLink: 'https://github.com/Wolf-PSG/roboChat',
   },
 ];
@@ -338,7 +340,7 @@ const Landing = () => {
               <strong> coding!</strong> as well as helping out in my community.
               <br /> <br />
               I have been volunteering at my local gurdwara as a guide and mentor for children and
-              young adults for the past 6 years.
+              young adults for the past 8 years.
               <br /> I also study two instruments (Harmonium and tabla) to a semi professional level
             </p>{' '}
           </div>
