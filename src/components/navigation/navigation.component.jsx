@@ -22,19 +22,6 @@ const Navigation = () => {
     <div className="navigation">
       {isTabletOrMobile ? (
         <div className="mobileNav">
-          <div className="icon" id="icon" >
-          <Link
-              activeClass="active"
-              className="navLinks"
-              to="welcome"
-              spy
-              smooth
-              duration={1000}
-            >
-            <FontAwesomeIcon icon={faChevronDown} size="lg" />
-            </Link>
-
-          </div>
         </div>
       ) : (
         <nav className="navbar">

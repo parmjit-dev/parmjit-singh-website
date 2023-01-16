@@ -129,15 +129,15 @@ const Landing = () => {
                 onInit={(typewriter) => {
                   typewriter
                     .typeString(
-                      "<span style='font-size:45px;line-height:1.8;'> Parmjit Singh  </span>"
+                      "<span style='font-size:45px;line-height:1.8;'> Parmjit Singh,  </span>"
                     )
                     .pauseFor(1000)
                     .typeString(
-                      '<span style="font-size:45px;line-height:1.8;"> Software Engineer </span>'
+                      '<span style="font-size:45px;line-height:1.8;"> Software Engineer. </span>'
                     )
                     .pauseFor(1000)
                     .typeString(
-                      '<span style="font-size:45px;line-height:1.8;"> Welcome To My Site</span>'
+                      '<span style="font-size:45px;line-height:1.8;"> Welcome. </span>'
                     )
                     .pauseFor(2500)
                     .start();
