@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-scroll';
 import './navigation.style.scss';
 import ReactTooltip from 'react-tooltip';
-import resume from '../../static/Parmjit_Singh_Resume_Jul_2023.pdf';
+import resume from '../static/Parmjit_Singh_Resume_Jul_2023.pdf';
 
 const Navigation = () => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
