@@ -49,8 +49,24 @@ a.homepage:hover {
   text-align: center;
 }
 
+.contacts_playlist_container {
+      margin-top: 50px;
+
+  min-height: 100px;
+  position: absolute; /* Position the footer absolutely */
+  bottom: 0; /* Stick it to the bottom */
+  min-width: 100%;
+  background: #ac3b61;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .playlist-greeting_container {
   padding: 30px;
+}
+
+.playlist-hint {
+  padding-bottom: 20px;
 }
 
 .spotify_container {
@@ -62,7 +78,6 @@ a.homepage:hover {
   bottom: 0;
   left: 0;
   right: 0;
-  position: absolute;
   justify-content: center;
   margin: auto;
   align-items: center;
@@ -85,36 +100,33 @@ a.homepage:hover {
   /* position: relative; */
 }
 
-#gr_updates_widget{
+#gr_updates_widget {
   font-family: 'spotify-circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   border-radius: 5px;
-  background-color:#fff;
-  -webkit-box-shadow: 0px 0px 4px 1px #595959,
-  inset 0px 0px 0px 1px #7D730B;
-  -moz-box-shadow: 0px 0px 4px 1px #595959,
-  inset 0px 0px 0px 1px #7D730B;
-  box-shadow: 0px 0px 4px 1px #595959,
-  inset 0px 0px 0px 1px #7D730B;
-  padding:20px 10px 35px 15px;
-  width:250px;
-  height:330px;
-  }
-  #gr_footer{
-  margin-bottom:10px;
-  }
-  #gr_updates_widget p{
-  padding:0px;
-  margin:0;
-  font-size:14px;
-  }
-  #gr_footer img{
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 4px 1px #595959, inset 0px 0px 0px 1px #7d730b;
+  -moz-box-shadow: 0px 0px 4px 1px #595959, inset 0px 0px 0px 1px #7d730b;
+  box-shadow: 0px 0px 4px 1px #595959, inset 0px 0px 0px 1px #7d730b;
+  padding: 20px 10px 35px 15px;
+  width: 250px;
+  height: 330px;
+}
+#gr_footer {
+  margin-bottom: 10px;
+}
+#gr_updates_widget p {
+  padding: 0px;
+  margin: 0;
+  font-size: 14px;
+}
+#gr_footer img {
   margin-top: 1 0px;
-  width:100px;
-  float:left;
-  }
-  #gr_updates_widget img{
-    border-style:none;
-  }
+  width: 100px;
+  float: left;
+}
+#gr_updates_widget img {
+  border-style: none;
+}
 
 /**********************************************MOBILE******************************************/
 @media only screen and (max-width: 786px) {
@@ -189,6 +201,18 @@ a.homepage:hover {
   }
 
   /*********SPOTIFY*********/
+  .contacts_playlist_container {
+        margin-top: 50px;
+
+    min-height: 100px;
+    position: relative; /* Position the footer absolutely */
+    bottom: 0; /* Stick it to the bottom */
+    min-width: 100%;
+    background: #ac3b61;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .spotify_container {
     flex-direction: column;
     text-align: center;
@@ -201,8 +225,8 @@ a.homepage:hover {
     position: relative;
     background: #123c69;
     color: #494143;
-    height: 3200px;
     align-items: center;
+    padding-bottom: 100px;
   }
   .card_container {
     display: flex;
@@ -218,6 +242,7 @@ a.homepage:hover {
   .contacts_container {
     /* width: auto; */
     /* padding: 25px 50px; */
+    flex-shrink: 0; /* Prevent the footer from shrinking when content is tall */
     background: #ac3b61;
     min-height: 100px;
     display: flex;
@@ -263,6 +288,19 @@ a.homepage:hover {
   }
   * {
     line-height: 1.1;
+  }
+
+  .contacts_playlist_container {
+        margin-top: 50px;
+
+    min-height: 100px;
+    position: absolute; /* Position the footer absolutely */
+    bottom: 0; /* Stick it to the bottom */
+    min-width: 100%;
+    background: #ac3b61;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   body {

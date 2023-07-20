@@ -10,12 +10,11 @@ import Skills from '../components/skills/skills.component';
 import Social from '../components/social/social';
 import Card from '../components/project_card/project_card.component';
 import mythosJPG from '../static/mythosapi.png';
-import quizmakerJPG from '../static/quiz-maker-psg.png';
-import quizReactJPG from '../static/quiz-maker-react.png';
+import yourvendorJPG from '../static/yourvendor.png';
+import kickballJPG from '../static/kickball.png';
 import myMuseJPG from '../static/myMuseBackend.png';
 import gnkcJPG from '../static/gnkcJPG.png';
 import wavePNG from '../static/birds.png';
-import lvChatRoomPNG from '../static/lv-chat_room.png';
 
 ReactGA.initialize('UA-181720692-1');
 
@@ -24,7 +23,6 @@ const calcLeft = (o) => `translateX(${o * -0.2}px)`;
 
 const card_data = [
   {
-    // link: 'https://mythosapi.herokuapp.com/',
     link: 'N/A',
     title: 'Mythos API',
     image: mythosJPG,
@@ -32,40 +30,32 @@ const card_data = [
     githubLink: 'https://github.com/Wolf-PSG/MythosAPI',
   },
   {
-    link: 'https://quiz-maker-psg.netlify.app/',
-    title: 'quiz-maker Web App -- REST API',
-    image: quizmakerJPG,
-    desc: 'This is a Web App built with the MERN (Mongodb, Express.js, React, Node.js) stack using AWS S3 for image storage. The Node API is hosted on heroku. Not currently maintained',
-    githubLink: 'https://github.com/Wolf-PSG/quizPortfolio',
+    link: 'https://yourvendor-demo.netlify.app/',
+    title: 'Freelance: Vendor Application',
+    image: yourvendorJPG,
+    desc: 'An application I created for a clients new business venture, site uses Vue.js with Vite and utlises AWS services for image and analytics',
+    githubLink: 'N/A',
   },
   {
-    link: 'https://quiz-maker-psg.netlify.app/',
-    title: 'quiz-maker Web App -- React',
-    image: quizReactJPG,
-    desc: 'Quiz app frontend. built with React.js. Not currently maintained',
-    githubLink: 'https://github.com/Wolf-PSG/quizPortfolioWebApp',
+    link: 'N/A',
+    title: 'Freelance: Homework/Quiz CMS',
+    image: gnkcJPG,
+    desc: 'Web App built with a Django and PostgreSQL using AWS S3 for media storage. Key focus on optimisation for mobile and tablet view.',
+    githubLink: 'https://github.com/Wolf-PSG/GNKC',
   },
   {
     link: 'N/A',
     title: 'myMuse - real-time chat App',
     image: myMuseJPG,
-    desc: 'This is a Web App built with a Nodejs and Graphql backend using Subscriptions and Websockets to handle realtime chat. Frontend is built with React and is currently under development. Not currently maintained',
+    desc: 'This is a Web App built with a Nodejs and Graphql backend using Subscriptions and Websockets to handle realtime chat. Not currently maintained',
     githubLink: 'https://github.com/Wolf-PSG/myMuse',
   },
   {
     link: 'N/A',
-    // link: 'https://gnkc-test.herokuapp.com/',
-    title: 'Client Project - Website and Homework/Quiz CMS',
-    image: gnkcJPG,
-    desc: 'This is a Web App built with a Django and PostgreSQL using AWS S3 for media storage. Also optimised for mobile and tablet view. Code not available for viewing.',
-    githubLink: 'N/A',
-  },
-  {
-    link: 'N/A',
-    title: 'Laravel + Vue Chat Room',
-    image: lvChatRoomPNG,
-    desc: 'This is a Web App built with Laravel, Vue, MySQL and Laravel Websockets. Not currently maintained.',
-    githubLink: 'https://github.com/Wolf-PSG/roboChat',
+    title: 'KickBall - Golang GraphQL api',
+    image: kickballJPG,
+    desc: 'Player stat generator api built in Golang and GraphQL',
+    githubLink: 'https://github.com/Wolf-PSG/kickball',
   },
 ];
 
@@ -138,9 +128,7 @@ const Landing = () => {
                       '<span style="font-size:45px;line-height:1.8;"> Software Engineer. </span>'
                     )
                     .pauseFor(1000)
-                    .typeString(
-                      '<span style="font-size:45px;line-height:1.8;"> Welcome. </span>'
-                    )
+                    .typeString('<span style="font-size:45px;line-height:1.8;"> Welcome. </span>')
                     .pauseFor(2500)
                     .start();
                 }}
@@ -335,13 +323,16 @@ const Landing = () => {
           </div>
           <div className="about_me_paragraph_container">
             <p className="about_me paragraph_p">
-              Hey, I'm software engineer who has a passion for <strong> web development</strong>,
-              learning and self improvement. <br /> <br />I enjoy reading, music and of course
-              <strong> coding!</strong> as well as helping out in my community.
+              Hey I'm Parmjit, I'm a software engineer with a passion in creating{' '}
+              <strong> Data-driven </strong>, <strong> Responsive </strong> and{' '}
+              <strong> Secure </strong>
+              <strong>applications. </strong> <br /> <br /> I have professional and freelance
+              experience in <strong> Full Stack Development </strong> and{' '}
+              <strong> Data Engineering </strong>
               <br /> <br />
-              I have been volunteering at my local gurdwara as a guide and mentor for children and
-              young adults for the past 8 years.
-              <br /> I also study two instruments (Harmonium and tabla) to a semi professional level
+              For information about my interest and what I enjoy, please view the contact section
+              <br /> <br />
+              Below are just some of the skills I have acquired so far:
             </p>{' '}
           </div>
           <div className="qualifications">
@@ -365,7 +356,7 @@ const Landing = () => {
       </div>
       <div className="contacts_container">
         <Element name="contacts">
-          <Social />
+          <Social landing={true}/>
         </Element>
       </div>
     </div>

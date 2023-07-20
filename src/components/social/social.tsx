@@ -6,10 +6,13 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+import resume from '../../static/Parmjit_Singh_Resume_Jul_2023.pdf';
+
+import { faEnvelope, faHeart, faFile } from '@fortawesome/free-regular-svg-icons';
 import { useAlert } from 'react-alert';
 
-const Social = () => {
+const Social = (props: { landing: Boolean }) => {
   const alert = useAlert();
 
   return (
@@ -39,9 +42,25 @@ const Social = () => {
       >
         <FontAwesomeIcon icon={faEnvelope} size="3x" />
       </a>
-      <a rel="noopener noreferrer" href="/playlist" className="play social">
-        <FontAwesomeIcon icon={faHeart} size="3x" />
-      </a>
+      {!props.landing ? (
+        <a rel="noopener noreferrer" href="/" className="play social">
+          <FontAwesomeIcon icon={faHome} size="3x" />
+        </a>
+      ) : (
+        <a rel="noopener noreferrer" href="/playlist" className="play social">
+          <FontAwesomeIcon icon={faHeart} size="3x" />
+        </a>
+      )}
+      {!props.landing && (
+        <a
+          rel="noopener noreferrer"
+          href={resume}
+          download="Parmjit_Singh_Resume_Jul_2023.pdf"
+          className="play social"
+        >
+          <FontAwesomeIcon icon={faFile} size="3x" />
+        </a>
+      )}
     </div>
   );
 };
