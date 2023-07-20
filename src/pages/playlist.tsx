@@ -1,6 +1,3 @@
-/* eslint-disable jsx-a11y/iframe-has-title */
-/* eslint-disable react/style-prop-object */
-
 import Social from '../components/social/social';
 
 const Playlist = () => {
