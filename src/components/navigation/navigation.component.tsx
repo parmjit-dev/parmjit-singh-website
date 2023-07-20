@@ -3,9 +3,8 @@ import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-scroll';
 import './navigation.style.scss';
 import ReactTooltip from 'react-tooltip';
-import resume from '../../static/Parmjit_Singh_Resume_Jul_2023.pdf';
 
-const Navigation = () => {
+const Navigation = (props: {resume: any}) => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
   const [resumeText, setResumeText] = useState('Resume');
   // eslint-disable-next-line no-unused-vars
@@ -23,7 +22,7 @@ const Navigation = () => {
         </div>
       ) : (
         <nav className="navbar">
-          <a href={resume} download="Parmjit_Singh_Resume_Jul_2023.pdf">
+          <a href={props.resume} download="Parmjit_Singh_Resume_Jul_2023.pdf">
             <span className="buttonCode" data-tip="Currently employed as a software engineer">Resume</span>
             <ReactTooltip />
           </a>

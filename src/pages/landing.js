@@ -15,7 +15,7 @@ import kickballJPG from '../static/kickball.png';
 import myMuseJPG from '../static/myMuseBackend.png';
 import gnkcJPG from '../static/gnkcJPG.png';
 import wavePNG from '../static/birds.png';
-
+import resume from '../static/Parmjit_Singh_Resume_Jul_2023.pdf';
 ReactGA.initialize('UA-181720692-1');
 
 const calcRight = (o) => `translateX(${o * 0.2}px)`;
@@ -112,7 +112,7 @@ const Landing = () => {
     <div className="page" ref={ref}>
       <Meta />
       <div className="landing">
-        <Navigation />
+        <Navigation resume={resume} />
         <img src={wavePNG} className="landing_wave" alt="birds resting on branch" />
         <div className="title_container">
           {isTabletOrMobile ? (
@@ -356,7 +356,7 @@ const Landing = () => {
       </div>
       <div className="contacts_container">
         <Element name="contacts">
-          <Social landing={true}/>
+          <Social landing={true} resume={resume} />
         </Element>
       </div>
     </div>

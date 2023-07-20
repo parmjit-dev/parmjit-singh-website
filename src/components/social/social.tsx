@@ -2,12 +2,11 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
-import resume from '../../static/Parmjit_Singh_Resume_Jul_2023.pdf';
 
 import { faEnvelope, faHeart, faFile } from '@fortawesome/free-regular-svg-icons';
 import { useAlert } from 'react-alert';
 
-const Social = (props: { landing: Boolean }) => {
+const Social = (props: { landing: Boolean, resume: any }) => {
   const alert = useAlert();
 
   return (
@@ -49,7 +48,7 @@ const Social = (props: { landing: Boolean }) => {
       {!props.landing && (
         <a
           rel="noopener noreferrer"
-          href={resume}
+          href={props.resume}
           download="Parmjit_Singh_Resume_Jul_2023.pdf"
           className="play social"
         >

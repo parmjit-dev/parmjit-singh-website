@@ -1,7 +1,8 @@
 import Social from '../components/social/social';
+import resume from '../static/Parmjit_Singh_Resume_Jul_2023.pdf';
 
 const Playlist = () => {
-  const socialProps = {landing: false}
+  const socialProps = { landing: false, resume: resume };
   return (
     <div className="playlist">
       <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async></script>
@@ -16,8 +17,8 @@ const Playlist = () => {
         <h3 className="playlist-hint">
           I have been volunteering at my local gurdwara as a guide and mentor for children and young
           adults for the past 9 years.
-          <br /> <br />I also study two (Indian Classical) instruments the Harmonium and tabla which I
-          play at a semi professional level
+          <br /> <br />I also study two (Indian Classical) instruments the Harmonium and tabla which
+          I play at a semi professional level
         </h3>
       </div>
       <div className="spotify_container">
