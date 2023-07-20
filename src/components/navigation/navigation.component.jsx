@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-scroll';
 import './navigation.style.scss';
 import ReactTooltip from 'react-tooltip';
-// import resume from '../../static/Parmjit_Singh_Resume.pdf';
+import resume from '../../static/Parmjit_Singh_Resume_Jul_2023.pdf';
 
 const Navigation = () => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
@@ -25,7 +25,7 @@ const Navigation = () => {
         <nav className="navbar">
         {/* download="Parmjit_Singh_Resume.pdf" */}
         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-          <a>
+          <a href={resume} download="Parmjit_Singh_Resume_Jul_2023.pdf">
             <span className="buttonCode" data-tip="Currently employed as a software engineer">Resume</span>
             <ReactTooltip />
           </a>
