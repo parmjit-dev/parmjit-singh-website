@@ -45,8 +45,12 @@ export default function HeaderNav() {
     <header className="site-header">
       <div className="nav-container">
         <nav className="nav-desktop" aria-label="Primary">
-          <a href={linkedInHref}>LinkedIn</a>
-          <a href={githubHref}>Github</a>
+          <a href={linkedInHref} target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+          <a href={githubHref} target="_blank" rel="noopener noreferrer">
+            Github
+          </a>
         </nav>
       </div>
 
@@ -76,10 +80,20 @@ export default function HeaderNav() {
           aria-label="Mobile navigation"
         >
           <nav className="nav-mobile">
-            <a onClick={() => setOpen(false)} href={linkedInHref}>
+            <a
+              onClick={() => setOpen(false)}
+              href={linkedInHref}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               LinkedIn
             </a>
-            <a onClick={() => setOpen(false)} href={githubHref}>
+            <a
+              onClick={() => setOpen(false)}
+              href={githubHref}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Github
             </a>
           </nav>
