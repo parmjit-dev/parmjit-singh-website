@@ -129,7 +129,7 @@ a.homepage:hover {
 }
 
 /**********************************************MOBILE******************************************/
-@media only screen and (max-width: 786px) {
+@media only screen and (max-width: 1024px) {
   .landing {
     background: #edc7b7;
     min-height: 100vh;
@@ -145,7 +145,7 @@ a.homepage:hover {
   }
 
   .landing_wave {
-    min-width: 100%;
+    max-width: 60vh;
     position: absolute;
     bottom: 0px;
     right: 0px;
@@ -282,306 +282,6 @@ a.homepage:hover {
 /***************************************************************************************/
 /****************************************4K**********************************************/
 
-@media only screen and (min-width: 2540px) {
-  *::-webkit-scrollbar {
-    display: none;
-  }
-  * {
-    line-height: 1.1;
-  }
-
-  .contacts_playlist_container {
-        margin-top: 50px;
-
-    min-height: 100px;
-    position: absolute; /* Position the footer absolutely */
-    bottom: 0; /* Stick it to the bottom */
-    min-width: 100%;
-    background: #ac3b61;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  body {
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #edc8b5;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
-
-  li {
-    list-style: none;
-  }
-
-  h2 {
-    margin: 0;
-    padding: 0;
-  }
-  /****************************************LANDING*********************************************/
-  .landing {
-    background: #edc7b7;
-    min-height: 100vh;
-    justify-content: center;
-  }
-
-  .landing_wave {
-    width: 40%;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-  }
-
-  .navigation {
-    float: right;
-  }
-  .nav {
-    height: 100px;
-    width: auto;
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    margin: 20px auto;
-    float: right;
-  }
-
-  .buttonCode {
-    color: #123c69;
-    font-size: 40px;
-    text-decoration: none;
-    background: inherit;
-    padding: 15px;
-    margin: 15px;
-    border-radius: 20px;
-    display: inline-block;
-    transition: all 0.4s ease 0s;
-  }
-
-  .navLinks {
-    cursor: pointer;
-  }
-
-  .buttonCode:hover {
-    color: #edc7b7;
-    background: #123c69;
-    border-color: #123c69;
-    transition: all 0.4s ease 0s;
-  }
-
-  .front_image {
-    position: absolute;
-    margin: auto;
-    left: 50%;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 400px;
-    max-height: 300px;
-  }
-
-  .type-container {
-    color: #123c69;
-    position: absolute;
-    top: 15%;
-    left: 20%;
-    padding: 100px;
-    overflow: hidden;
-    font-size: 60px;
-    /* max-width: 100%; */
-  }
-  .typewriter_name {
-    padding: 40px;
-  }
-  .typewriter_role {
-    padding: 40px;
-  }
-  .typewriter_welcome {
-    padding: 40px;
-  }
-  /*************************************************************************************/
-
-  /****************************************ABOUT ME*********************************************/
-
-  .welcome {
-    background: #bab2b5;
-    color: #123c69;
-    display: flex;
-    justify-content: center;
-    min-height: 1000px;
-    width: 100%;
-  }
-
-  .element_welcome_container {
-    width: 100%;
-    justify-content: center;
-    position: relative;
-  }
-
-  .greeting {
-    margin: 0px;
-    text-align: center;
-  }
-
-  .about_me_paragraph {
-    justify-content: center;
-    word-wrap: break-word;
-    font-size: 28px;
-    width: auto;
-    left: 5%;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .about_me_paragraph_container {
-    text-align: center;
-    font-size: 30px;
-  }
-  .heading_container {
-    min-height: 700px;
-    position: relative;
-    overflow: hidden;
-  }
-  .about_1 {
-    padding-left: 20px;
-  }
-  .about_2 {
-    padding-left: 170px;
-  }
-  .about_3 {
-    padding-left: 230px;
-  }
-  .about_4 {
-    padding-left: 400px;
-  }
-  .about_5 {
-    padding-left: 500px;
-  }
-  .about_6 {
-    padding-left: 540px;
-  }
-
-  .qualifications {
-    background: #bab2b5;
-    color: #123c69;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    min-height: 900px;
-  }
-
-  .skill_container {
-    padding: 50px;
-    background-color: #eee2dc;
-    border-radius: 10px;
-    box-shadow: 10px 20px #888888;
-    color: #123c69;
-    width: 1000px;
-    height: 500px;
-    text-align: center;
-    align-items: center;
-  }
-
-  /*************************************************************************************/
-
-  /****************************************PROJECTS*********************************************/
-
-  .project_container {
-    justify-content: center;
-    position: relative;
-    background: #123c69;
-    color: #ac3b61;
-    min-height: 1600px;
-    height: 1800px;
-    align-items: center;
-    width: 100%;
-  }
-
-  .card_container {
-    /* width: 100%; */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .project-greetings {
-    font-size: 50px;
-    padding-top: 40px;
-    text-align: center;
-  }
-  .project-hint {
-    padding-top: 30px;
-    text-align: center;
-    font-size: 30px;
-  }
-
-  /*************************************************************************************/
-
-  /****************************************CONTACTS*********************************************/
-
-  .contact {
-    background: #a5a0a4;
-  }
-
-  .element-container {
-    position: relative;
-  }
-
-  .contacts_container {
-    background: #ac3b61;
-    min-height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  a.social {
-    color: #eee2dc;
-    margin: 0 1rem;
-    font-size: 30px;
-    transition: transform 250ms;
-    display: inline-block;
-    outline: none;
-    -webkit-tap-highlight-color: transparent;
-    /* padding: 25px; */
-  }
-
-  a.social:hover {
-    transform: translateY(-2px);
-  }
-  a.scroll {
-    color: #f06a6c;
-    position: sticky;
-    left: 49%;
-    bottom: 30%;
-    transform: translatey(0px);
-    overflow-block: hidden;
-  }
-
-  .floating {
-    animation-name: floating;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    margin-left: 30px;
-    margin-top: 3px;
-  }
-
-  @keyframes floating {
-    from {
-      transform: translate(0, 0px);
-    }
-    65% {
-      transform: translate(0, 12px);
-    }
-    to {
-      transform: translate(0, -0px);
-    }
-  }
-}
 /*********************************************************************************************/
 /*************************************************Default*************************************/
 /****************************************LANDING*********************************************/
@@ -592,8 +292,17 @@ a.homepage:hover {
   justify-content: center;
 }
 
+.landing_branch {
+  position: absolute;
+  top: -40px;     /* nudge out of frame for a natural edge placement */
+  left: -60px;
+  width: 280px;
+  height: auto;
+  opacity: 0.85;
+  }
+
 .landing_wave {
-  width: 40%;
+  width: 90vh;
   position: absolute;
   bottom: 0px;
   right: 0px;

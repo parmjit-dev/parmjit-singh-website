@@ -8,12 +8,12 @@ const Meta = () => {
         <title> Parmjit Singh </title>{' '}
         <meta
           name="description"
-          content="Portfolio Site of Parmjit Singh Gill. Software Engineer, BSc Computer Science, 22."
+          content="Portfolio Site of Parmjit Singh Gill. Software Engineer, BSc Computer Science, 25."
         />
         <meta itemProp="name" content="Parmjit.Dev" />
         <meta
           itemProp="description"
-          content="Portfolio Site of Parmjit Singh Gill. Software Engineer, BSc Computer Science, 22."
+          content="Portfolio Site of Parmjit Singh Gill. Software Engineer, BSc Computer Science, 25."
         />
         <meta itemProp="image" content="" />
         <meta property="og:url" content="https://parmjit.dev" />
@@ -21,14 +21,14 @@ const Meta = () => {
         <meta property="og:title" content="Parmjit.dev" />
         <meta
           property="og:description"
-          content="Portfolio Site of Parmjit Singh Gill. Software Engineer, BSc Computer Science, 22."
+          content="Portfolio Site of Parmjit Singh Gill. Software Engineer, BSc Computer Science, 25."
         />
         <meta property="og:image" content="" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Parmjit.Dev" />
         <meta
           name="twitter:description"
-          content="Portfolio Site of Parmjit Singh Gill. Software Engineer, BSc Computer Science, 22."
+          content="Portfolio Site of Parmjit Singh Gill. Software Engineer, BSc Computer Science, 25."
         />
         <meta name="twitter:image" content="" />
       </Helmet>

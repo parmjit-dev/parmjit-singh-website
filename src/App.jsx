@@ -4,7 +4,6 @@
 /* eslint-disable react/jsx-filename-extension */
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Landing from './pages/landing';
-import Playlist from './pages/playlist';
 import './index.css';
 
 const App = () => {
@@ -13,9 +12,6 @@ const App = () => {
       <Switch>
         <Route exact path="/">
           <Landing />
-        </Route>
-        <Route path="/playlist">
-          <Playlist />
         </Route>
       </Switch>
     </Router>

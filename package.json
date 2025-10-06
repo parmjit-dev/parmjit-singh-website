@@ -8,44 +8,26 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.18",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "@types/jest": "^27.5.1",
-    "@types/node": "^17.0.35",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
     "@types/react-router-dom": "^5.3.3",
-    "concurrently": "^7.2.2",
     "dotenv": "^8.6.0",
-    "prop-types": "^15.8.1",
-    "react": "^17.0.2",
-    "react-alert": "^7.0.3",
-    "react-alert-template-basic": "^1.0.2",
-    "react-burger-menu": "^3.0.8",
-    "react-dom": "^17.0.2",
-    "react-ga": "^3.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    
     "react-helmet": "^6.1.0",
-    "react-parallax": "^3.3.0",
     "react-responsive": "^8.2.0",
-    "react-responsive-carousel": "^3.2.23",
-    "react-router": "^6.3.0",
     "react-router-dom": "^5.3.3",
-    "react-scripts": "^4.0.3",
-    "react-scroll": "^1.8.7",
-    "react-scroll-parallax": "^2.4.3",
     "react-spring": "^8.0.27",
-    "react-tooltip": "^4.2.21",
     "sass": "^1.64.0",
     "sass-loader": "^13.3.2",
     "typescript": "^4.6.4",
     "typewriter-effect": "^2.18.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "browserslist": {
     "production": [
@@ -60,10 +42,10 @@
     ]
   },
   "devDependencies": {
-    "@types/react-alert": "^7.0.2",
     "@types/react-helmet": "^6.1.5",
-    "@types/react-responsive": "^8.0.5",
-    "@types/react-scroll": "^1.8.3",
-    "prettier": "^2.6.2"
+    "@vitejs/plugin-react": "^5.0.4",
+    "prettier": "^2.6.2",
+    "vite": "^7.1.9",
+    "vite-plugin-svgr": "^4.5.0"
   }
 }
